@@ -1,0 +1,24 @@
+[2017-08-17 11:34:07.980] [INFO] default - ROU | /security/profiles
+[2017-08-17 11:34:07.981] [INFO] default - BSN | profiles [getAll]
+[2017-08-17 11:34:07.981] [INFO] default - DTA | profiles [getAll]
+[2017-08-17 11:34:08.008] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-17 11:54:45.832] [INFO] default - ROU | /security/profiles
+[2017-08-17 11:54:45.833] [INFO] default - BSN | profiles [getAll]
+[2017-08-17 11:54:45.833] [INFO] default - DTA | profiles [getAll]
+[2017-08-17 11:54:45.836] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-17 11:56:48.417] [INFO] default - ROU | /security/profiles
+[2017-08-17 11:56:48.417] [INFO] default - BSN | profiles [getAll]
+[2017-08-17 11:56:48.417] [INFO] default - DTA | profiles [getAll]
+[2017-08-17 11:56:48.419] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-17 12:03:00.038] [INFO] default - ROU | /security/profiles
+[2017-08-17 12:03:00.038] [INFO] default - BSN | profiles [getAll]
+[2017-08-17 12:03:00.038] [INFO] default - DTA | profiles [getAll]
+[2017-08-17 12:03:00.041] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-17 12:08:51.649] [INFO] default - ROU | /security/profiles
+[2017-08-17 12:08:51.649] [INFO] default - BSN | profiles [getAll]
+[2017-08-17 12:08:51.650] [INFO] default - DTA | profiles [getAll]
+[2017-08-17 12:08:51.651] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-17 12:18:36.418] [INFO] default - ROU | /security/profiles
+[2017-08-17 12:18:36.422] [INFO] default - BSN | profiles [getAll]
+[2017-08-17 12:18:36.423] [INFO] default - DTA | profiles [getAll]
+[2017-08-17 12:18:36.456] [INFO] default - DTA | profiles [getAll] retrieve: 4 records

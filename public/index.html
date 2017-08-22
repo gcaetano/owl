@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html manifest="">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10, user-scalable=yes">
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw5N8YQKIsVuPj4OE8n2c6h5yG-ry2mlY&v=3"></script>
+    <script type="text/javascript" src="resources/js/jquery/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="resources/js/i18n/i18next-1.7.1.min.js"></script>
+
+    <title>Owl</title>
+    <script type="text/javascript">
+        var lang = localStorage ? (localStorage.getItem('user-lang') || 'en') : 'en';
+        var loggedIn = localStorage.getItem('owl-logged-in');
+        if(loggedIn === null) localStorage.setItem('owl-logged-in', false);
+
+        $.i18n.init({
+            lng: lang,
+            fallbackLng: 'en',
+            resGetPath: 'locales/__lng__?v=' + Date.now(),
+            useLocalStorage: true,
+            ns: {
+                namespaces: ['app'], defaultNs: 'app'
+            }
+        });
+    </script>
+
+    <!--
+    <script type="text/javascript">
+        var Ext = Ext || {}; // Ext namespace won't be defined yet...
+
+        // This function is called by the Microloader after it has performed basic
+        // device detection. The results are provided in the "tags" object. You can
+        // use these tags here or even add custom tags. These can be used by platform
+        // filters in your manifest or by platformConfig expressions in your app.
+        //
+        Ext.beforeLoad = function (tags) {
+            var s = location.search,  // the query string (ex "?foo=1&bar")
+                profile;
+
+            // For testing look for "?classic" or "?modern" in the URL to override
+            // device detection default.
+            //
+            if (s.match(/\bclassic\b/)) {
+                profile = 'classic';
+            }
+            else if (s.match(/\bmodern\b/)) {
+                profile = 'modern';
+            }
+            else {
+                profile = tags.desktop ? 'classic' : 'modern';
+                //profile = tags.phone ? 'modern' : 'classic';
+            }
+
+            Ext.manifest = profile; // this name must match a build profile name
+
+            // This function is called once the manifest is available but before
+            // any data is pulled from it.
+            //
+            //return function (manifest) {
+                // peek at / modify the manifest object
+            //};
+        };
+    </script>
+    -->
+    
+    <!-- The line below must be kept intact for Sencha Cmd to build your application -->
+    <script id="microloader" data-app="2be6b134-0345-405a-87be-063d45ffee5c" type="text/javascript" src="bootstrap.js"></script>
+
+</head>
+<body></body>
+</html>

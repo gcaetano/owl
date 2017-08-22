@@ -1,0 +1,379 @@
+[2017-08-22 10:50:31.934] [INFO] default - ROU | /security/groups
+[2017-08-22 10:50:31.936] [INFO] default - BSN | groups [getAll]
+[2017-08-22 10:50:31.937] [INFO] default - DTA | groups [getAll]
+[2017-08-22 10:50:31.974] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 10:50:31.975] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 10:50:32.540] [INFO] default - ROU | /security/profiles
+[2017-08-22 10:50:32.540] [INFO] default - BSN | groups [getAll]
+[2017-08-22 10:50:32.540] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 10:50:32.543] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 10:54:19.359] [INFO] default - ROU | /security/groups
+[2017-08-22 10:54:19.359] [INFO] default - BSN | groups [getAll]
+[2017-08-22 10:54:19.360] [INFO] default - DTA | groups [getAll]
+[2017-08-22 10:54:19.361] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 10:54:19.361] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 10:54:21.182] [INFO] default - ROU | /security/profiles
+[2017-08-22 10:54:21.182] [INFO] default - BSN | groups [getAll]
+[2017-08-22 10:54:21.182] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 10:54:21.185] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 10:56:22.330] [INFO] default - ROU | /security/groups
+[2017-08-22 10:56:22.330] [INFO] default - BSN | groups [getAll]
+[2017-08-22 10:56:22.331] [INFO] default - DTA | groups [getAll]
+[2017-08-22 10:56:22.332] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 10:56:22.334] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 10:56:22.615] [INFO] default - ROU | /security/profiles
+[2017-08-22 10:56:22.615] [INFO] default - BSN | groups [getAll]
+[2017-08-22 10:56:22.615] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 10:56:22.617] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 11:13:54.188] [INFO] default - ROU | /security/groups
+[2017-08-22 11:13:54.188] [INFO] default - BSN | groups [getAll]
+[2017-08-22 11:13:54.188] [INFO] default - DTA | groups [getAll]
+[2017-08-22 11:13:54.190] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 11:13:54.190] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 11:13:54.333] [INFO] default - ROU | /security/profiles
+[2017-08-22 11:13:54.334] [INFO] default - BSN | groups [getAll]
+[2017-08-22 11:13:54.334] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 11:13:54.335] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 11:26:08.578] [INFO] default - ROU | /security/groups
+[2017-08-22 11:26:08.578] [INFO] default - BSN | groups [getAll]
+[2017-08-22 11:26:08.578] [INFO] default - DTA | groups [getAll]
+[2017-08-22 11:26:08.580] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 11:26:08.580] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 11:26:08.725] [INFO] default - ROU | /security/profiles
+[2017-08-22 11:26:08.725] [INFO] default - BSN | groups [getAll]
+[2017-08-22 11:26:08.726] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 11:26:08.727] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 11:28:56.129] [INFO] default - ROU | /security/groups
+[2017-08-22 11:28:56.129] [INFO] default - BSN | groups [getAll]
+[2017-08-22 11:28:56.129] [INFO] default - DTA | groups [getAll]
+[2017-08-22 11:28:56.131] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 11:28:56.131] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 11:28:56.279] [INFO] default - ROU | /security/profiles
+[2017-08-22 11:28:56.279] [INFO] default - BSN | groups [getAll]
+[2017-08-22 11:28:56.279] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 11:28:56.280] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 11:33:54.053] [INFO] default - ROU | /security/groups
+[2017-08-22 11:33:54.053] [INFO] default - BSN | groups [getAll]
+[2017-08-22 11:33:54.053] [INFO] default - DTA | groups [getAll]
+[2017-08-22 11:33:54.056] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 11:33:54.056] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 11:37:51.301] [INFO] default - ROU | /security/profiles
+[2017-08-22 11:37:51.301] [INFO] default - BSN | groups [getAll]
+[2017-08-22 11:37:51.302] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 11:37:51.303] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 11:38:03.347] [INFO] default - ROU | /security/groups
+[2017-08-22 11:38:03.347] [INFO] default - BSN | groups [getAll]
+[2017-08-22 11:38:03.349] [INFO] default - DTA | groups [getAll]
+[2017-08-22 11:38:03.352] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 11:38:03.352] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 11:46:25.390] [INFO] default - ROU | /security/profiles
+[2017-08-22 11:46:25.390] [INFO] default - BSN | groups [getAll]
+[2017-08-22 11:46:25.390] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 11:46:25.392] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 11:46:33.444] [INFO] default - ROU | /security/groups
+[2017-08-22 11:46:33.444] [INFO] default - BSN | groups [getAll]
+[2017-08-22 11:46:33.444] [INFO] default - DTA | groups [getAll]
+[2017-08-22 11:46:33.445] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 11:46:33.446] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 12:08:24.762] [INFO] default - ROU | /security/profiles
+[2017-08-22 12:08:24.762] [INFO] default - BSN | groups [getAll]
+[2017-08-22 12:08:24.762] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 12:08:24.763] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 12:09:06.179] [INFO] default - ROU | /security/groups
+[2017-08-22 12:09:06.179] [INFO] default - BSN | groups [getAll]
+[2017-08-22 12:09:06.179] [INFO] default - DTA | groups [getAll]
+[2017-08-22 12:09:06.180] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 12:09:06.180] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 12:11:57.085] [INFO] default - ROU | /security/profiles
+[2017-08-22 12:11:57.086] [INFO] default - BSN | groups [getAll]
+[2017-08-22 12:11:57.086] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 12:11:57.087] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 12:12:09.244] [INFO] default - ROU | /security/groups
+[2017-08-22 12:12:09.244] [INFO] default - BSN | groups [getAll]
+[2017-08-22 12:12:09.245] [INFO] default - DTA | groups [getAll]
+[2017-08-22 12:12:09.246] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 12:12:09.246] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 12:12:09.319] [INFO] default - ROU | /security/profiles
+[2017-08-22 12:12:09.320] [INFO] default - BSN | groups [getAll]
+[2017-08-22 12:12:09.320] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 12:12:09.321] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 12:12:43.981] [INFO] default - ROU | /security/groups
+[2017-08-22 12:12:43.981] [INFO] default - BSN | groups [getAll]
+[2017-08-22 12:12:43.981] [INFO] default - DTA | groups [getAll]
+[2017-08-22 12:12:43.982] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 12:12:43.982] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 12:15:29.946] [INFO] default - ROU | /security/profiles
+[2017-08-22 12:15:29.946] [INFO] default - BSN | groups [getAll]
+[2017-08-22 12:15:29.946] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 12:15:29.948] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 13:05:41.582] [INFO] default - ROU | /security/groups
+[2017-08-22 13:05:41.582] [INFO] default - BSN | groups [getAll]
+[2017-08-22 13:05:41.583] [INFO] default - DTA | groups [getAll]
+[2017-08-22 13:05:41.584] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 13:05:41.584] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 13:07:57.137] [INFO] default - ROU | /security/profiles
+[2017-08-22 13:07:57.137] [INFO] default - BSN | groups [getAll]
+[2017-08-22 13:07:57.137] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 13:07:57.139] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 13:08:03.426] [INFO] default - ROU | /security/groups
+[2017-08-22 13:08:03.427] [INFO] default - BSN | groups [getAll]
+[2017-08-22 13:08:03.427] [INFO] default - DTA | groups [getAll]
+[2017-08-22 13:08:03.429] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 13:08:03.429] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 13:13:10.382] [INFO] default - ROU | /security/profiles
+[2017-08-22 13:13:10.382] [INFO] default - BSN | groups [getAll]
+[2017-08-22 13:13:10.383] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 13:13:10.384] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 13:13:14.676] [INFO] default - ROU | /security/groups
+[2017-08-22 13:13:14.676] [INFO] default - BSN | groups [getAll]
+[2017-08-22 13:13:14.676] [INFO] default - DTA | groups [getAll]
+[2017-08-22 13:13:14.677] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 13:13:14.678] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 13:19:35.586] [INFO] default - ROU | /security/profiles
+[2017-08-22 13:19:35.597] [INFO] default - BSN | groups [getAll]
+[2017-08-22 13:19:35.597] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 13:19:35.602] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 13:19:40.223] [INFO] default - ROU | /security/groups
+[2017-08-22 13:19:40.224] [INFO] default - BSN | groups [getAll]
+[2017-08-22 13:19:40.224] [INFO] default - DTA | groups [getAll]
+[2017-08-22 13:19:40.225] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 13:19:40.225] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 13:21:26.925] [INFO] default - ROU | /security/profiles
+[2017-08-22 13:21:26.925] [INFO] default - BSN | groups [getAll]
+[2017-08-22 13:21:26.925] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 13:21:26.926] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 13:21:31.217] [INFO] default - ROU | /security/groups
+[2017-08-22 13:21:31.219] [INFO] default - BSN | groups [getAll]
+[2017-08-22 13:21:31.219] [INFO] default - DTA | groups [getAll]
+[2017-08-22 13:21:31.221] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 13:21:31.221] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 13:21:44.563] [INFO] default - ROU | /security/profiles
+[2017-08-22 13:21:44.563] [INFO] default - BSN | groups [getAll]
+[2017-08-22 13:21:44.564] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 13:21:44.565] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 13:21:44.589] [INFO] default - ROU | /security/groups
+[2017-08-22 13:21:44.589] [INFO] default - BSN | groups [getAll]
+[2017-08-22 13:21:44.590] [INFO] default - DTA | groups [getAll]
+[2017-08-22 13:21:44.591] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 13:21:44.591] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 16:33:16.566] [INFO] default - ROU | /security/groups
+[2017-08-22 16:33:16.566] [INFO] default - BSN | groups [getAll]
+[2017-08-22 16:33:16.567] [INFO] default - DTA | groups [getAll]
+[2017-08-22 16:33:16.568] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 16:33:16.568] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 16:33:16.869] [INFO] default - ROU | /security/profiles
+[2017-08-22 16:33:16.869] [INFO] default - BSN | groups [getAll]
+[2017-08-22 16:33:16.869] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 16:33:16.870] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 16:34:05.233] [INFO] default - ROU | /security/groups
+[2017-08-22 16:34:05.233] [INFO] default - BSN | groups [getAll]
+[2017-08-22 16:34:05.233] [INFO] default - DTA | groups [getAll]
+[2017-08-22 16:34:05.234] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 16:34:05.235] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 16:34:05.494] [INFO] default - ROU | /security/profiles
+[2017-08-22 16:34:05.495] [INFO] default - BSN | groups [getAll]
+[2017-08-22 16:34:05.495] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 16:34:05.496] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 16:40:42.271] [INFO] default - ROU | /security/groups
+[2017-08-22 16:40:42.272] [INFO] default - BSN | groups [getAll]
+[2017-08-22 16:40:42.272] [INFO] default - DTA | groups [getAll]
+[2017-08-22 16:40:42.273] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 16:40:42.273] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 16:45:12.711] [INFO] default - ROU | /security/profiles
+[2017-08-22 16:45:12.711] [INFO] default - BSN | groups [getAll]
+[2017-08-22 16:45:12.711] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 16:45:12.713] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 16:45:12.737] [INFO] default - ROU | /security/groups
+[2017-08-22 16:45:12.737] [INFO] default - BSN | groups [getAll]
+[2017-08-22 16:45:12.737] [INFO] default - DTA | groups [getAll]
+[2017-08-22 16:45:12.739] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 16:45:12.739] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 16:46:29.701] [INFO] default - ROU | /security/groups
+[2017-08-22 16:46:29.702] [INFO] default - BSN | groups [getAll]
+[2017-08-22 16:46:29.702] [INFO] default - DTA | groups [getAll]
+[2017-08-22 16:46:29.703] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 16:46:29.704] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 16:46:41.132] [INFO] default - ROU | /security/profiles
+[2017-08-22 16:46:41.132] [INFO] default - BSN | groups [getAll]
+[2017-08-22 16:46:41.134] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 16:46:41.136] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 16:46:45.454] [INFO] default - ROU | /security/groups
+[2017-08-22 16:46:45.455] [INFO] default - BSN | groups [getAll]
+[2017-08-22 16:46:45.455] [INFO] default - DTA | groups [getAll]
+[2017-08-22 16:46:45.455] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 16:46:45.456] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 16:47:17.708] [INFO] default - ROU | /security/profiles
+[2017-08-22 16:47:17.708] [INFO] default - BSN | groups [getAll]
+[2017-08-22 16:47:17.708] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 16:47:17.709] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 16:47:50.978] [INFO] default - ROU | /security/groups
+[2017-08-22 16:47:50.978] [INFO] default - BSN | groups [getAll]
+[2017-08-22 16:47:50.978] [INFO] default - DTA | groups [getAll]
+[2017-08-22 16:47:50.980] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 16:47:50.980] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 16:48:37.465] [INFO] default - ROU | /security/profiles
+[2017-08-22 16:48:37.465] [INFO] default - BSN | groups [getAll]
+[2017-08-22 16:48:37.465] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 16:48:37.466] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 16:49:28.135] [INFO] default - ROU | /security/groups
+[2017-08-22 16:49:28.135] [INFO] default - BSN | groups [getAll]
+[2017-08-22 16:49:28.135] [INFO] default - DTA | groups [getAll]
+[2017-08-22 16:49:28.136] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 16:49:28.137] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 16:55:09.122] [INFO] default - ROU | /security/profiles
+[2017-08-22 16:55:09.122] [INFO] default - BSN | groups [getAll]
+[2017-08-22 16:55:09.123] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 16:55:09.124] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 16:58:24.748] [INFO] default - ROU | /security/profiles
+[2017-08-22 16:58:24.749] [INFO] default - BSN | groups [getAll]
+[2017-08-22 16:58:24.749] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 16:58:24.750] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 16:58:24.760] [INFO] default - ROU | /security/groups
+[2017-08-22 16:58:24.760] [INFO] default - BSN | groups [getAll]
+[2017-08-22 16:58:24.761] [INFO] default - DTA | groups [getAll]
+[2017-08-22 16:58:24.762] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 16:58:24.762] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 17:12:44.240] [INFO] default - ROU | /security/profiles
+[2017-08-22 17:12:44.240] [INFO] default - BSN | groups [getAll]
+[2017-08-22 17:12:44.240] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 17:12:44.241] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 17:12:44.250] [INFO] default - ROU | /security/groups
+[2017-08-22 17:12:44.250] [INFO] default - BSN | groups [getAll]
+[2017-08-22 17:12:44.250] [INFO] default - DTA | groups [getAll]
+[2017-08-22 17:12:44.251] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 17:12:44.251] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 17:15:38.063] [INFO] default - ROU | /security/profiles
+[2017-08-22 17:15:38.064] [INFO] default - BSN | groups [getAll]
+[2017-08-22 17:15:38.064] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 17:15:38.065] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 17:15:38.076] [INFO] default - ROU | /security/groups
+[2017-08-22 17:15:38.076] [INFO] default - BSN | groups [getAll]
+[2017-08-22 17:15:38.076] [INFO] default - DTA | groups [getAll]
+[2017-08-22 17:15:38.077] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 17:15:38.078] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 17:16:08.314] [INFO] default - ROU | /security/profiles
+[2017-08-22 17:16:08.314] [INFO] default - BSN | groups [getAll]
+[2017-08-22 17:16:08.314] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 17:16:08.315] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 17:16:08.327] [INFO] default - ROU | /security/groups
+[2017-08-22 17:16:08.327] [INFO] default - BSN | groups [getAll]
+[2017-08-22 17:16:08.327] [INFO] default - DTA | groups [getAll]
+[2017-08-22 17:16:08.329] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 17:16:08.329] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 17:16:54.296] [INFO] default - ROU | /security/profiles
+[2017-08-22 17:16:54.302] [INFO] default - BSN | groups [getAll]
+[2017-08-22 17:16:54.303] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 17:16:54.304] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 17:16:54.316] [INFO] default - ROU | /security/groups
+[2017-08-22 17:16:54.316] [INFO] default - BSN | groups [getAll]
+[2017-08-22 17:16:54.316] [INFO] default - DTA | groups [getAll]
+[2017-08-22 17:16:54.317] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 17:16:54.317] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 17:19:55.454] [INFO] default - ROU | /security/groups
+[2017-08-22 17:19:55.454] [INFO] default - BSN | groups [getAll]
+[2017-08-22 17:19:55.454] [INFO] default - DTA | groups [getAll]
+[2017-08-22 17:19:55.455] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 17:19:55.456] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 17:19:55.464] [INFO] default - ROU | /security/profiles
+[2017-08-22 17:19:55.465] [INFO] default - BSN | groups [getAll]
+[2017-08-22 17:19:55.465] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 17:19:55.466] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 17:20:05.271] [INFO] default - ROU | /security/profiles
+[2017-08-22 17:20:05.271] [INFO] default - BSN | groups [getAll]
+[2017-08-22 17:20:05.271] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 17:20:05.272] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 17:20:05.280] [INFO] default - ROU | /security/groups
+[2017-08-22 17:20:05.280] [INFO] default - BSN | groups [getAll]
+[2017-08-22 17:20:05.281] [INFO] default - DTA | groups [getAll]
+[2017-08-22 17:20:05.282] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 17:20:05.282] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 17:32:24.972] [INFO] default - ROU | /security/groups
+[2017-08-22 17:32:24.972] [INFO] default - BSN | groups [getAll]
+[2017-08-22 17:32:24.972] [INFO] default - DTA | groups [getAll]
+[2017-08-22 17:32:24.974] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 17:32:24.974] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 17:32:24.982] [INFO] default - ROU | /security/profiles
+[2017-08-22 17:32:24.982] [INFO] default - BSN | groups [getAll]
+[2017-08-22 17:32:24.982] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 17:32:24.986] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 17:44:23.826] [INFO] default - ROU | /security/groups
+[2017-08-22 17:44:23.826] [INFO] default - BSN | groups [getAll]
+[2017-08-22 17:44:23.826] [INFO] default - DTA | groups [getAll]
+[2017-08-22 17:44:23.828] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 17:44:23.828] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 17:44:23.861] [INFO] default - ROU | /security/profiles
+[2017-08-22 17:44:23.861] [INFO] default - BSN | groups [getAll]
+[2017-08-22 17:44:23.861] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 17:44:23.863] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 17:50:20.490] [INFO] default - ROU | /security/profiles
+[2017-08-22 17:50:20.490] [INFO] default - BSN | groups [getAll]
+[2017-08-22 17:50:20.490] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 17:50:20.492] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 17:50:20.522] [INFO] default - ROU | /security/groups
+[2017-08-22 17:50:20.522] [INFO] default - BSN | groups [getAll]
+[2017-08-22 17:50:20.523] [INFO] default - DTA | groups [getAll]
+[2017-08-22 17:50:20.524] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 17:50:20.524] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 17:54:46.819] [INFO] default - ROU | /security/groups
+[2017-08-22 17:54:46.819] [INFO] default - BSN | groups [getAll]
+[2017-08-22 17:54:46.819] [INFO] default - DTA | groups [getAll]
+[2017-08-22 17:54:46.821] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 17:54:46.821] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 17:54:46.842] [INFO] default - ROU | /security/profiles
+[2017-08-22 17:54:46.843] [INFO] default - BSN | groups [getAll]
+[2017-08-22 17:54:46.843] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 17:54:46.844] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 18:13:45.410] [INFO] default - ROU | /security/profiles
+[2017-08-22 18:13:45.411] [INFO] default - BSN | groups [getAll]
+[2017-08-22 18:13:45.411] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 18:13:45.412] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 18:13:45.444] [INFO] default - ROU | /security/groups
+[2017-08-22 18:13:45.445] [INFO] default - BSN | groups [getAll]
+[2017-08-22 18:13:45.445] [INFO] default - DTA | groups [getAll]
+[2017-08-22 18:13:45.446] [INFO] default - DTA | groups [getAll] retrieve: 1 records
+[2017-08-22 18:13:45.447] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 18:26:39.206] [INFO] default - ROU | /security/profiles
+[2017-08-22 18:26:39.206] [INFO] default - BSN | groups [getAll]
+[2017-08-22 18:26:39.206] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 18:26:39.208] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 18:26:39.244] [INFO] default - ROU | /security/groups
+[2017-08-22 18:26:39.245] [INFO] default - BSN | groups [getAll]
+[2017-08-22 18:26:39.245] [INFO] default - DTA | groups [getAll]
+[2017-08-22 18:26:39.246] [INFO] default - DTA | groups [getAll] retrieve: 2 records
+[2017-08-22 18:26:39.246] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]},{"id":"599c66bf57207500e444b754","text":"guests","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599c66bf57207500e444b754","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 18:31:09.012] [INFO] default - ROU | /security/profiles
+[2017-08-22 18:31:09.012] [INFO] default - BSN | groups [getAll]
+[2017-08-22 18:31:09.012] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 18:31:09.013] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 18:31:09.049] [INFO] default - ROU | /security/groups
+[2017-08-22 18:31:09.049] [INFO] default - BSN | groups [getAll]
+[2017-08-22 18:31:09.049] [INFO] default - DTA | groups [getAll]
+[2017-08-22 18:31:09.050] [INFO] default - DTA | groups [getAll] retrieve: 2 records
+[2017-08-22 18:31:09.050] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]},{"id":"599c66bf57207500e444b754","text":"guests","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599c66bf57207500e444b754","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 18:36:26.621] [INFO] default - ROU | /security/profiles
+[2017-08-22 18:36:26.621] [INFO] default - BSN | groups [getAll]
+[2017-08-22 18:36:26.621] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 18:36:26.622] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 18:36:26.631] [INFO] default - ROU | /security/groups
+[2017-08-22 18:36:26.632] [INFO] default - BSN | groups [getAll]
+[2017-08-22 18:36:26.632] [INFO] default - DTA | groups [getAll]
+[2017-08-22 18:36:26.633] [INFO] default - DTA | groups [getAll] retrieve: 2 records
+[2017-08-22 18:36:26.633] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]},{"id":"599c66bf57207500e444b754","text":"guests","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599c66bf57207500e444b754","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 18:38:44.827] [INFO] default - ROU | /security/profiles
+[2017-08-22 18:38:44.827] [INFO] default - BSN | groups [getAll]
+[2017-08-22 18:38:44.827] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 18:38:44.829] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 18:38:44.837] [INFO] default - ROU | /security/groups
+[2017-08-22 18:38:44.837] [INFO] default - BSN | groups [getAll]
+[2017-08-22 18:38:44.837] [INFO] default - DTA | groups [getAll]
+[2017-08-22 18:38:44.838] [INFO] default - DTA | groups [getAll] retrieve: 2 records
+[2017-08-22 18:38:44.838] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]},{"id":"599c66bf57207500e444b754","text":"guests","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599c66bf57207500e444b754","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 18:41:03.223] [INFO] default - ROU | /security/profiles
+[2017-08-22 18:41:03.223] [INFO] default - BSN | groups [getAll]
+[2017-08-22 18:41:03.223] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 18:41:03.224] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 18:41:03.234] [INFO] default - ROU | /security/groups
+[2017-08-22 18:41:03.234] [INFO] default - BSN | groups [getAll]
+[2017-08-22 18:41:03.234] [INFO] default - DTA | groups [getAll]
+[2017-08-22 18:41:03.235] [INFO] default - DTA | groups [getAll] retrieve: 2 records
+[2017-08-22 18:41:03.236] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"Owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]},{"id":"599c66bf57207500e444b754","text":"Guests","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599c66bf57207500e444b754","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
