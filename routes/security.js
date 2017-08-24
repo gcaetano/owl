@@ -56,4 +56,15 @@ router.get('/groups', function (req, res) {
     })
 });
 
+
+router.post('/user/save', function (req, res, next) {
+    logger.info("ROU | /security/user/save");
+    logger.info(req.body.userName);
+    user.save(req.body.user, req.body.password, function (err, auth) {
+        req.session.user = auth;
+        //if (err) res.status(200).send({success: false});
+        res.status(200).send({success: true, data: []});
+    });
+});
+
 module.exports = router;
