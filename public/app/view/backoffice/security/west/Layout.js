@@ -4,7 +4,7 @@ Ext.define('Owl.view.backoffice.security.west.Layout', {
     alias: 'widget.backoffice-security-west-layout',
 
     requires: [
-        'Owl.view.backoffice.security.west.groups.Groups',
+        'Owl.view.backoffice.security.west.groups.TreeGroups',
         'Owl.view.backoffice.security.west.profiles.ProfilesGrid',
         'Owl.util.Glyphs'
     ],
@@ -21,11 +21,11 @@ Ext.define('Owl.view.backoffice.security.west.Layout', {
 
     items: [
         {
-            glyph: Owl.util.Glyphs.getGlyph('group'),
+            //glyph: Owl.util.Glyphs.getGlyph('group'),
             xtype: 'permission-security-group-panel'
         },
         {
-            glyph: Owl.util.Glyphs.getGlyph('user'),
+            //glyph: Owl.util.Glyphs.getGlyph('user'),
             xtype: 'permission-security-profiles'
         }
     ]

@@ -5,7 +5,8 @@ Ext.define('Owl.view.backoffice.security.west.groups.Panel',{
 
     requires: [
         'Owl.view.backoffice.security.west.groups.PanelController',
-        'Owl.view.backoffice.security.west.groups.PanelModel'
+        'Owl.view.backoffice.security.west.groups.PanelModel',
+        'Owl.util.Glyphs'
     ],
 
     controller: 'backoffice-security-west-groups-panel',
@@ -33,7 +34,7 @@ Ext.define('Owl.view.backoffice.security.west.groups.Panel',{
                     xtype: 'button',
                     itemId: 'addGroup',
                     reference: 'addGroup',
-                    glyph: 'xf0fe@FontAwesome',
+                    glyph: Owl.util.Glyphs.getGlyph('plus'),
                     listeners: {
                         click: 'onAddGroupClick'
                     }

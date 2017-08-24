@@ -20,7 +20,6 @@ Ext.define('Owl.view.backoffice.security.west.groups.PanelController', {
         var store = Ext.create('Owl.store.Groups');
         if (store !== undefined) {
             store.load(function (records, op, success) { //#3
-                console.log(records);
                 Ext.each(records, function (item) { //#4
                     var node = { //#11
                         text: item.get('text'),

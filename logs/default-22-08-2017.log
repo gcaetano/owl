@@ -377,3 +377,57 @@
 [2017-08-22 18:41:03.234] [INFO] default - DTA | groups [getAll]
 [2017-08-22 18:41:03.235] [INFO] default - DTA | groups [getAll] retrieve: 2 records
 [2017-08-22 18:41:03.236] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"Owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]},{"id":"599c66bf57207500e444b754","text":"Guests","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599c66bf57207500e444b754","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 20:33:13.634] [INFO] default - ROU | /security/profiles
+[2017-08-22 20:33:13.634] [INFO] default - BSN | groups [getAll]
+[2017-08-22 20:33:13.634] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 20:33:13.636] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 20:33:13.645] [INFO] default - ROU | /security/groups
+[2017-08-22 20:33:13.646] [INFO] default - BSN | groups [getAll]
+[2017-08-22 20:33:13.646] [INFO] default - DTA | groups [getAll]
+[2017-08-22 20:33:13.647] [INFO] default - DTA | groups [getAll] retrieve: 2 records
+[2017-08-22 20:33:13.647] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"Owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]},{"id":"599c66bf57207500e444b754","text":"Guests","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599c66bf57207500e444b754","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 20:36:06.384] [INFO] default - ROU | /security/profiles
+[2017-08-22 20:36:06.384] [INFO] default - BSN | groups [getAll]
+[2017-08-22 20:36:06.384] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 20:36:06.385] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 20:36:06.394] [INFO] default - ROU | /security/groups
+[2017-08-22 20:36:06.394] [INFO] default - BSN | groups [getAll]
+[2017-08-22 20:36:06.400] [INFO] default - DTA | groups [getAll]
+[2017-08-22 20:36:06.402] [INFO] default - DTA | groups [getAll] retrieve: 2 records
+[2017-08-22 20:36:06.402] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"Owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]},{"id":"599c66bf57207500e444b754","text":"Guests","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599c66bf57207500e444b754","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 20:52:21.916] [INFO] default - ROU | /security/profiles
+[2017-08-22 20:52:21.916] [INFO] default - BSN | groups [getAll]
+[2017-08-22 20:52:21.916] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 20:52:21.917] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 20:52:21.928] [INFO] default - ROU | /security/groups
+[2017-08-22 20:52:21.928] [INFO] default - BSN | groups [getAll]
+[2017-08-22 20:52:21.928] [INFO] default - DTA | groups [getAll]
+[2017-08-22 20:52:21.929] [INFO] default - DTA | groups [getAll] retrieve: 2 records
+[2017-08-22 20:52:21.930] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"Owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]},{"id":"599c66bf57207500e444b754","text":"Guests","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599c66bf57207500e444b754","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 20:53:05.727] [INFO] default - ROU | /security/profiles
+[2017-08-22 20:53:05.728] [INFO] default - BSN | groups [getAll]
+[2017-08-22 20:53:05.728] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 20:53:05.729] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 20:53:05.738] [INFO] default - ROU | /security/groups
+[2017-08-22 20:53:05.738] [INFO] default - BSN | groups [getAll]
+[2017-08-22 20:53:05.738] [INFO] default - DTA | groups [getAll]
+[2017-08-22 20:53:05.740] [INFO] default - DTA | groups [getAll] retrieve: 2 records
+[2017-08-22 20:53:05.740] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"Owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]},{"id":"599c66bf57207500e444b754","text":"Guests","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599c66bf57207500e444b754","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 20:54:15.477] [INFO] default - ROU | /security/profiles
+[2017-08-22 20:54:15.477] [INFO] default - BSN | groups [getAll]
+[2017-08-22 20:54:15.477] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 20:54:15.478] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 20:54:15.486] [INFO] default - ROU | /security/groups
+[2017-08-22 20:54:15.486] [INFO] default - BSN | groups [getAll]
+[2017-08-22 20:54:15.486] [INFO] default - DTA | groups [getAll]
+[2017-08-22 20:54:15.487] [INFO] default - DTA | groups [getAll] retrieve: 2 records
+[2017-08-22 20:54:15.487] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"Owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]},{"id":"599c66bf57207500e444b754","text":"Guests","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599c66bf57207500e444b754","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]
+[2017-08-22 21:00:33.726] [INFO] default - ROU | /security/profiles
+[2017-08-22 21:00:33.726] [INFO] default - BSN | groups [getAll]
+[2017-08-22 21:00:33.726] [INFO] default - DTA | profiles [getAll]
+[2017-08-22 21:00:33.727] [INFO] default - DTA | profiles [getAll] retrieve: 4 records
+[2017-08-22 21:00:33.738] [INFO] default - ROU | /security/groups
+[2017-08-22 21:00:33.738] [INFO] default - BSN | groups [getAll]
+[2017-08-22 21:00:33.738] [INFO] default - DTA | groups [getAll]
+[2017-08-22 21:00:33.739] [INFO] default - DTA | groups [getAll] retrieve: 2 records
+[2017-08-22 21:00:33.739] [INFO] default - BSN | [{"id":"599767c557207500e444b752","text":"Owners","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599767c557207500e444b752","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]},{"id":"599c66bf57207500e444b754","text":"Guests","glyph":"xf0c0@FontAwesome","leaf":false,"children":[{"id":"599c66bf57207500e444b754","text":"bar","glyph":"xf0c0@FontAwesome","leaf":true}]}]

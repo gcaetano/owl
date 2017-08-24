@@ -60,9 +60,6 @@ Ext.define('Owl.view.login.Login',{
             xtype: 'toolbar',
             dock: 'bottom',
             items: [
-                 {
-                     xtype: 'translation' //#26
-                 },
                 {
                     xtype: 'tbfill' //#25
                 },

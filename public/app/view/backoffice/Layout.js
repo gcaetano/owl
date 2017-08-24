@@ -5,16 +5,19 @@ Ext.define('Owl.view.backoffice.Layout',{
 
     requires: [
         'Owl.view.backoffice.security.Layout',
-        'Owl.view.backoffice.make.Make'
+        'Owl.view.backoffice.make.Make',
+        'Owl.util.Glyphs'
     ],
 
     border: false,
 
     items: [
         {
-            xtype: 'backoffice-security-layout'
+            xtype: 'backoffice-security-layout',
+            glyph: Owl.util.Glyphs.getGlyph('shield')
         }, {
-            xtype: 'backoffice-make'
+            xtype: 'backoffice-make',
+            glyph: Owl.util.Glyphs.getGlyph('registered')
         }
     ]
 });

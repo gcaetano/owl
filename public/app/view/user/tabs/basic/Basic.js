@@ -1,8 +1,10 @@
 
 Ext.define('Owl.view.user.tabs.basic.Basic',{
-    extend: 'Ext.tab.Tab',
+    extend: 'Ext.panel.Panel',
     alias: 'widget.user-tabs-basic',
-
+    config: {
+        securityLevel: 2 //Super Administrators
+    },
     requires: [
         'Owl.view.user.tabs.basic.BasicController',
         'Owl.view.user.tabs.basic.BasicModel'
@@ -12,6 +14,5 @@ Ext.define('Owl.view.user.tabs.basic.Basic',{
     viewModel: {
         type: 'user-tabs-basic-basic'
     },
-    closable: false,
-    title: "Foo"
+    closable: false
 });
