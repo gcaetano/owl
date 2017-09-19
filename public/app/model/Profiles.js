@@ -3,6 +3,7 @@ Ext.define('Owl.model.Profiles', {
 
     fields: [
         { type: 'string', name: 'alias' },
+        { type: 'string', name: '_id' },
         { type: 'int',  name: 'level' }
     ],
 

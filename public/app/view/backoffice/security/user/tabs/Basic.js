@@ -4,7 +4,8 @@ Ext.define('Owl.view.backoffice.security.user.tabs.Basic', {
     alias: 'widget.backoffice-security-user-tabs-basic',
     requires: [
         'Owl.view.backoffice.security.user.tabs.BasicController',
-        'Owl.view.backoffice.security.user.tabs.BasicModel'
+        'Owl.view.backoffice.security.user.tabs.BasicModel',
+        'Owl.model.Profiles'
     ],
 
     controller: 'backoffice-security-user-tabs-basic',
@@ -67,6 +68,19 @@ Ext.define('Owl.view.backoffice.security.user.tabs.Basic', {
                     fieldLabel: $.t('app.locale'),
                     name: 'locale',
                     bind: '{currentUser.locale}'
+                },
+                {
+                    xtype: 'combo',
+                    name: 'profile',
+                    fieldLabel: $.t('app.profile'),
+                    queryMode: 'local',
+                    forceSelection: true,
+                    editable: false,
+                    bind: {
+                        store: '{Profiles}'
+                    },
+                    valueField: '_id',
+                    displayField: 'alias'
                 },
                 {
                     inputType: 'password',

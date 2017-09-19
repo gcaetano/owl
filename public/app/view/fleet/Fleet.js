@@ -21,8 +21,8 @@ Ext.define('Owl.view.fleet.Fleet',{
     border: false,
     items:[
         {
-            //xtype: 'fleet-map',
-            xtype: 'panel',
+            xtype: 'fleet-map',
+            //xtype: 'panel',
             region: 'center'
         },
         {

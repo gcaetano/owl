@@ -1,17 +1,16 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### ExtJs template
 .architect
-/public/bootstrap.css
-/public/bootstrap.js
-/public/bootstrap.json
-/public/bootstrap.jsonp
-/public/build/
+#/public/bootstrap.css
+#/public/bootstrap.js
+#/public/bootstrap.json
+#/public/bootstrap.jsonp
+#/public/build/
 /public/classic.json
 /public/classic.jsonp
-/public/ext/
 /public/modern.json
 /public/modern.jsonp
 /public/resources/sass/.sass-cache/
 .idea/
-node_modules/
+#node_modules/
 /logs/

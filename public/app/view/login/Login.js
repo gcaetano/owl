@@ -15,7 +15,7 @@ Ext.define('Owl.view.login.Login',{
     layout: {
         type: 'fit' // #7
     },
-
+    modal: true,
     controller: "login-controller",
     iconCls: 'fa fa-key fa-lg', // #8
     title: 'Login', // #9

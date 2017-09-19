@@ -47,6 +47,15 @@ router.get('/profiles', function (req, res) {
     })
 });
 
+router.get('/locale', function (req, res) {
+    logger.info("ROU | /security/profiles");
+
+    profiles.getAll(function (err, data) {
+        var result = {success: !err, data: data || []};
+        res.status(200).send(result);
+    })
+});
+
 router.get('/groups', function (req, res) {
     logger.info("ROU | /security/groups");
 

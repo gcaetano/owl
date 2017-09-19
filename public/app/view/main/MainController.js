@@ -13,9 +13,13 @@ Ext.define('Owl.view.main.MainController', {
     alias: 'controller.main',
 
     init: function(application) {
-        this.control({
-
-        });
+        var loggedIn = localStorage.getItem('owl-logged-in');
+        if (loggedIn === "false")
+            Ext.create(
+                {
+                    xtype: 'login'
+                }
+            );
     },
 
     onLogout: function(button, e, options){

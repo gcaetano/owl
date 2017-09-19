@@ -5,7 +5,6 @@ Ext.define('Owl.view.backoffice.security.user.WindowController', {
     onSave: function(button, e, options) {
         var form = button.up('panel').down('form');
         var me = this;
-        debugger;
         if (form && form.isValid()) {
             form.submit({
                 clientValidation: true,
@@ -17,7 +16,7 @@ Ext.define('Owl.view.backoffice.security.user.WindowController', {
         }
     },
 
-    onCancel : function(button, e, options){
+    onCancel : function(button, e, options) {
         var me = this;
         me.getView().destroy();
     },
