@@ -15,5 +15,4 @@ Ext.define('Owl.view.backoffice.security.user.tabs.BasicModel', {
             model: 'Owl.model.Locales'
         }
     }
-
 });

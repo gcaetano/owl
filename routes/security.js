@@ -3,6 +3,7 @@ var express = require('express'),
     user = require('./lib/users'),
     logger = require('../lib/utillity/logger'),
     profiles = require('../lib/business/profiles').Profiles;
+    locales = require('../lib/business/locales').Locales;
     groups = require('../lib/business/groups').Groups;
 
 router.post('/login', function (req, res, next) {
@@ -50,7 +51,7 @@ router.get('/profiles', function (req, res) {
 router.get('/locale', function (req, res) {
     logger.info("ROU | /security/profiles");
 
-    profiles.getAll(function (err, data) {
+    locales.getAll(function (err, data) {
         var result = {success: !err, data: data || []};
         res.status(200).send(result);
     })
@@ -65,15 +66,5 @@ router.get('/groups', function (req, res) {
     })
 });
 
-
-router.post('/user/save', function (req, res, next) {
-    logger.info("ROU | /security/user/save");
-    logger.info(req.body.userName);
-    user.save(req.body.user, req.body.password, function (err, auth) {
-        req.session.user = auth;
-        //if (err) res.status(200).send({success: false});
-        res.status(200).send({success: true, data: []});
-    });
-});
 
 module.exports = router;

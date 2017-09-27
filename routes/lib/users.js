@@ -4,6 +4,8 @@ var user = require('../lib/data/users'),
 
 var Data =  function(){};
 
+
+
 Data.prototype.makeAuth = function(username, password, callback){
     user.auth(username, password, function(err, data){
         if(err) callback(err, null);
@@ -42,10 +44,6 @@ Data.prototype.makeAuth = function(username, password, callback){
     });
 };
 
-Data.prototype.save = function(user, callback){
-
-};
-
 function getUniqueIds(mobiles) {
     var uids = [];
     for (var i = 0; i < mobiles.length; i++) {
@@ -54,6 +52,5 @@ function getUniqueIds(mobiles) {
     }
     return uids;
 }
-
 
 module.exports = new Data();

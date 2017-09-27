@@ -2,9 +2,8 @@ Ext.define('Owl.model.Locales', {
     extend: 'Ext.data.Model',
 
     fields: [
-        { type: 'string', name: 'alias' },
-        { type: 'string', name: '_id' },
-        { type: 'int',  name: 'level' }
+        { type: 'string', name: 'locale' },
+        { type: 'string', name: '_id' }
     ],
 
     proxy: {
