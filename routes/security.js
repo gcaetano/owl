@@ -57,14 +57,13 @@ router.get('/locale', function (req, res) {
     })
 });
 
-router.get('/groups', function (req, res) {
-    logger.info("ROU | /security/groups");
-
-    groups.getAll(function (err, data) {
-        var result = {success: !err, children: data || []};
-        res.status(200).send(result);
-    })
-});
+// router.get('/groups', function (req, res) {
+//     logger.info("ROU | /security/groups");
+//     groups.getAll(function (err, data) {
+//         var result = {success: !err, children: data || []};
+//         res.status(200).send(result);
+//     })
+// });
 
 
 module.exports = router;

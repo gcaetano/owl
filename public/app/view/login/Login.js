@@ -48,10 +48,6 @@ Ext.define('Owl.view.login.Login',{
                     specialKey: 'onTextFieldSpecialKey',
                     keypress: 'onTextFieldKeyPress'
                 }
-            }, {
-                xtype: 'displayfield',
-                hideEmptyLabel: false
-                //value: 'Enter any non-blank password'
             }]
         }
     ],

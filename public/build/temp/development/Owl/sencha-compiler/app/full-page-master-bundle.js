@@ -1,2 +1,2 @@
 // @tag full-page
-// @require C:\Users\Administrator\Documents\owl_project\owl\public\app.js
+// @require /Users/gcaetano/Development/owl/express-app/owl/public/app.js

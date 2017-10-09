@@ -6,7 +6,7 @@ var Db = require('mongodb').Db,
     Server = require('mongodb').Server,
     Tedious = require('tedious').Request,
     TYPES = require('tedious').TYPES,
-    config = require('../../../configs/defaults');
+    config = require('../../../lib/utillity/settings');
 
 var Data =  function(){};
 

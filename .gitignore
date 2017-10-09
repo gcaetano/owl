@@ -12,5 +12,7 @@
 /public/modern.jsonp
 /public/resources/sass/.sass-cache/
 .idea/
+.vscode/
 node_modules/
-/logs/
+public/build/
+logs/

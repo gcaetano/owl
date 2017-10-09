@@ -9,7 +9,7 @@ Ext.define('Owl.model.security.User', {
     proxy: {
         type: 'ajax',
         api: {
-            read: '/security/users/list'
+            read: '/users'
         },
         reader: {
             type: 'json',
