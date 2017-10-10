@@ -4,12 +4,14 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var locales = require('./routes/locales');
+var translations = require('./routes/translations');
 var security = require('./routes/security');
 
 
 var groups = require('./routes/resources/groups');
 var users = require('./routes/resources/users');
+var profiles = require('./routes/resources/profiles');
+var locales = require('./routes/resources/locales');
 
 var session = require('express-session');
 var MongoDBStore = require('connect-mongodb-session')(session);
@@ -52,11 +54,13 @@ MongoDb.openOwlConnection(function (db) {
 
     // app.use('/', index);
 
-    // app.use('/locales', locales);
-    // app.use('/security', security);
+    app.use('/translations', translations);
+    app.use('/security', security);
 
     app.use('/groups', groups);
     app.use('/users', users);
+    app.use('/profiles', profiles);
+    app.use('/locales', locales);
 
     // catch 404 and forward to error handler
     app.use(function(req, res, next) {
