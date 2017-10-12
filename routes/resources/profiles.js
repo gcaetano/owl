@@ -1,7 +1,8 @@
 var express = require('express'),
     router = express.Router(),
     logger = require('../../lib/utillity/logger'),
-    BL_Profiles = require('../../lib/business/profiles').BL_Profiles;
+    BL_Profiles = require('../../lib/business/profiles').BL_Profiles,
+    Helper = require('../../lib/utillity/helper').Helper;
 
 
  const  resource = 'profiles';
@@ -12,8 +13,10 @@ var express = require('express'),
  * Retrieves a list of all entities
  */
 router.get('/', (req, res, next) => {
-    logger.info("ROU | [GET] /%s", resource);
-    BL_Profiles.read(function (err, data) {
+    var options = req.query ? Helper.getReadOptions(req.query) : {}
+    logger.info("ROU [%s] [GET] /%s", req.sessionID, resource);
+
+    BL_Profiles.read(req.sessionID, options, (err, data) => {
         var result = {success: !err, data: data || []};
         res.status(200).send(result);
         res.end();

@@ -1,7 +1,8 @@
 var express = require('express'),
     router = express.Router(),
     logger = require('../../lib/utillity/logger'),
-    BL_Timezones = require('../../lib/business/timezones').BL_Timezones;
+    BL_Timezones = require('../../lib/business/timezones').BL_Timezones,
+    Helper = require('../../lib/utillity/helper').Helper;
 
 
  const  resource = 'timezones';
@@ -12,8 +13,10 @@ var express = require('express'),
  * Retrieves a list of all entities
  */
 router.get('/', (req, res, next) => {
-    logger.info("ROU | [GET] /%s", resource);
-    BL_Timezones.read(function (err, data) {
+    var options = req.query ? Helper.getReadOptions(req.query): {}
+    logger.info("ROU [%s] [GET] /%s", req.sessionID, resource);
+    
+    BL_Timezones.read(req.sessionID, options, (err, data) => {
         var result = {success: !err, data: data || []};
         res.status(200).send(result);
         res.end();

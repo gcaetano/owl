@@ -6,7 +6,7 @@ var express = require('express'),
     groups = require('../lib/business/groups').Groups;
 
 router.post('/auth', function (req, res, next) {
-    BL_Users.auth(req.body.user, req.body.password,  (err, user) => {
+    BL_Users.auth(req.sessionID, req.body.user, req.body.password,  (err, user) => {
         //req.session.user = user;
         if (err) res.status(200).send({success: false});
         res.status(200).send({success: true, data: user});

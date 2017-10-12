@@ -14,6 +14,7 @@ var profiles = require('./routes/resources/profiles');
 var cultures = require('./routes/resources/cultures');
 var timezones = require('./routes/resources/timezones');
 var mobiles = require('./routes/resources/mobiles');
+var fuel = require('./routes/resources/fuel');
 
 var session = require('express-session');
 var MongoDBStore = require('connect-mongodb-session')(session);
@@ -39,7 +40,7 @@ MongoDb.openOwlConnection(function (db) {
 
     var store = new MongoDBStore(
         {
-            uri: 'mongodb://10.0.0.122:27017/owl',
+            uri: 'mongodb://localhost:27017/owl',
             collection: 'sessions'
         });
 
@@ -64,6 +65,7 @@ MongoDb.openOwlConnection(function (db) {
     app.use('/cultures', cultures);
     app.use('/timezones', timezones);
     app.use('/mobiles', mobiles);
+    app.use('/fuel', fuel);
 
     // catch 404 and forward to error handler
     app.use(function(req, res, next) {
