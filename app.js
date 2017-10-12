@@ -4,14 +4,16 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var translations = require('./routes/translations');
+var locales = require('./routes/locales');
 var security = require('./routes/security');
 
 
 var groups = require('./routes/resources/groups');
 var users = require('./routes/resources/users');
 var profiles = require('./routes/resources/profiles');
-var locales = require('./routes/resources/locales');
+var cultures = require('./routes/resources/cultures');
+var timezones = require('./routes/resources/timezones');
+var mobiles = require('./routes/resources/mobiles');
 
 var session = require('express-session');
 var MongoDBStore = require('connect-mongodb-session')(session);
@@ -37,7 +39,7 @@ MongoDb.openOwlConnection(function (db) {
 
     var store = new MongoDBStore(
         {
-            uri: 'mongodb://localhost:27017/owl',
+            uri: 'mongodb://10.0.0.122:27017/owl',
             collection: 'sessions'
         });
 
@@ -54,13 +56,14 @@ MongoDb.openOwlConnection(function (db) {
 
     // app.use('/', index);
 
-    app.use('/translations', translations);
+    app.use('/locales', locales);
     app.use('/security', security);
-
     app.use('/groups', groups);
     app.use('/users', users);
     app.use('/profiles', profiles);
-    app.use('/locales', locales);
+    app.use('/cultures', cultures);
+    app.use('/timezones', timezones);
+    app.use('/mobiles', mobiles);
 
     // catch 404 and forward to error handler
     app.use(function(req, res, next) {

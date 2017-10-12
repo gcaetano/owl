@@ -1,10 +1,10 @@
 var express = require('express'),
     router = express.Router(),
     logger = require('../../lib/utillity/logger'),
-    BL_Locales = require('../../lib/business/locales').BL_Locales;
+    BL_Cultures = require('../../lib/business/cultures').BL_Cultures;
 
 
- const  resource = 'locales';
+ const  resource = 'cultures';
 
 //RET Representation State Transfer
 
@@ -13,7 +13,7 @@ var express = require('express'),
  */
 router.get('/', (req, res, next) => {
     logger.info("ROU | [GET] /%s", resource);
-    BL_Locales.read(function (err, data) {
+    BL_Cultures.read(function (err, data) {
         var result = {success: !err, data: data || []};
         res.status(200).send(result);
         res.end();
@@ -26,7 +26,7 @@ router.get('/', (req, res, next) => {
 router.get('/:id',(req, res, next) => {
     logger.info("ROU | [GET] /%s/id params %j", resource, req.params);
     if(req.params && req.params.id){
-        BL_Locales.readOne(req.params.id, function (err, data) {
+        BL_Cultures.readOne(req.params.id, function (err, data) {
             var result = {success: !err, data: data || []};
             res.status(200).send(result);
             res.end();
@@ -41,7 +41,7 @@ router.get('/:id',(req, res, next) => {
 router.post('/',(req, res, next) => {
     logger.info("ROU | [POST] /%s %j", resource, req.body);
     if(req.body && req.body !== {}){
-        BL_Locales.create(req.body, req.session.user, (err, insert) => {
+        BL_Cultures.create(req.body, req.session.user, (err, insert) => {
             var response = {success: !err, message: err ? err.errmsg : insert}
             res.status(200).send(response);
             res.end();
@@ -64,7 +64,7 @@ router.put('/:id', function (req, res) {
     // res.end();     
     
     if(req.body){
-        BL_Locales.update(req.params.id, req.body, req.session.user, function (err, update) {
+        BL_Cultures.update(req.params.id, req.body, req.session.user, function (err, update) {
             var result = {success: !err, message: update || []};
             res.status(200).send(result);
             res.end();        
@@ -78,7 +78,7 @@ router.put('/:id', function (req, res) {
 router.delete('/:id', function (req, res) {
     logger.info("ROU | [DELETE] /%s/id %j", resource, req.params);
     if(req.params && req.params.id){
-        BL_Locales.delete(req.params.id, function (err, remove) {
+        BL_Cultures.delete(req.params.id, function (err, remove) {
             var result = {success: !err, message: remove || []};
             res.status(200).send(result);
             res.end();        
