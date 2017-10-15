@@ -1,0 +1,171 @@
+ html,
+    body {
+        height: 100%;
+        margin: 0;
+    }
+    html {
+        background: url(../images/login/bg.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        font-family: 'Lato', sans-serif;
+        background-size: cover;
+    }
+    ::-webkit-input-placeholder {
+        color: #e8e8e8;
+    }
+    :-moz-placeholder {
+        color: #e8e8e8;
+        opacity: 1;
+    }
+    ::-moz-placeholder {
+        color: #e8e8e8;
+        opacity: 1;
+    }
+    :-ms-input-placeholder {
+        color: #e8e8e8;
+    }
+    ::-ms-input-placeholder {
+        color: #e8e8e8;
+    }
+    #gradient-bg {
+        background: rgba(96, 65, 153, 0.4);
+        background: -webkit-linear-gradient(to right, #2979b2, rgba(96, 65, 153, 0.4));
+        background: linear-gradient(to right, #2979b2, rgba(96, 65, 153, 0.4));
+        width: 100%;
+        height: 100%;
+    }
+    #login-wrap {
+        width: 600px;
+        height: 250px;
+        position: fixed;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: auto;
+    }
+    #login-header {
+        top: 42%;
+        left: 50%;
+        position: fixed;
+        transform: translate(-50%, -50%);
+        margin: auto;
+    }
+    #login-avatar {
+        top: 27%;
+        left: 50%;
+        position: fixed;
+        transform: translate(-50%, -50%);
+        margin: auto;
+    }
+    #login-avatar img {
+        border-radius: 50%;
+    }
+    #login-header h1 {
+        font-weight: 300;
+        color: white;
+        font-size: 38px;
+    }
+    #login-form input[type=text],
+    #login-form input[type=password] {
+        padding: 10px;
+        width: 280px;
+        height: 28px;
+        display: block;
+        margin: 10px;
+        background: rgba(255, 255, 255, 0.2);
+        border: none;
+        color: white;
+        margin-left: 110px;
+        letter-spacing: 1px;
+        background-size: 22px 22px;
+        background-position: 13px 13px;
+        background-repeat: no-repeat;
+        padding-left: 55px;
+        font-size: 13px;
+        font-weight: 500;
+    }
+    #login-form input[type=text] {
+        background-image: url(../images/login/icon_user.png);
+    }
+    #login-form input[type=password] {
+        background-image: url(../images/login/icon_password.png);
+    }
+    #login-form input[type=submit] {
+        padding: 13px;
+        width: 345px;
+        height: 52px;
+        margin: 10px;
+        border: none;
+        background-color: #21ba99;
+        margin-left: 110px;
+        color: white;
+        letter-spacing: 1px;
+    }
+    #login-form input[type=submit]:hover{
+        background-color:white;
+        color:#636363;
+        cursor: pointer;
+    }
+    #login-form input[type=text] {
+        margin-top: 50px;
+    }
+    #login-form {
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: block;
+    }
+    #overlay-bg {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        background-image: url(../images/login/overlay.png);
+        background-repeat: repeat;
+    }
+    #footer {
+        height: 80px;
+        width: 100%;
+        bottom: 0;
+        position: fixed;
+        background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+        background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+        text-align: center;
+    }
+    #footer span {
+        margin-top: 30px;
+        display: block;
+        color: #a3a1a1;
+        letter-spacing: 2px;
+        font-weight: 300;
+        font-size: 13px;
+    }
+    #flags-icons {
+        width: 400px;
+        height: 60px;
+    }
+    #flags-icons ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        padding: 20px;
+    }
+    #flags-icons ul li {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: inline;
+    }
+    #flags-icons ul li img {
+        padding: 5px;
+        width: 30px;
+        height: 20px;
+    }
+    #flags-icons ul li img:hover {
+        cursor:pointer;
+    }
