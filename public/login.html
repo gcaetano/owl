@@ -3,35 +3,64 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,400i" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="resources/styles/login.css">
-</head>
-<body>
-<div id="overlay-bg">
-<div id="gradient-bg">
-    <div id="flags-icons">
-        <ul>
-            <li><img src="resources/images/login/uk_flag.png" /></li>
-            <li><img src="resources/images/login/portugal_flag.png" /></li>
-            <li><img src="resources/images/login/spain_flag.png" /></li>
-            <li><img src="resources/images/login/france_flag.png" /></li>
-        </ul>
-
-    </div>
-        <div id="login-avatar">
-        <img src="/resources/images/login/login_avatar.png" width="130" height="130" />
-        </div>
-        <div id="login-header">
-            <h1>Iniciar Sessão</h1>
-        </div>
-    <div id="login-wrap">
+    <script type="text/javascript" src="resources/js/jquery/jquery-2.0.3.min.js"></script>
     
-        <form id="login-form">
-            <input type="text" class="login-user" placeholder="Utilizador" />
-            <input type="password" placeholder="Palavra-passe" />
-            <input type="submit" value="Login" />
-        </form>
-    </div>
-</div>
-</div>
-<div id="footer"><span>Versão 1.0</span></div>
-</body>
+    <script type='text/javascript'>
+        $(document).ready(function() {            
+            var loggedIn = localStorage.getItem('owl-logged-in');
+
+            if(loggedIn === true) {
+                window.location.href = "http://localhost:3000";
+            }
+
+            $('#login-form').submit(function(e) {
+                e.preventDefault(); 
+                $.ajax({
+                    type: "POST",
+                    url: '/security/auth',
+                    data: {
+                        username: $("#username").val(),
+                        password: $("#password").val()
+                    },
+                    success: function(data) {
+                        if(data && data.success) {
+                            localStorage.setItem('owl-logged-in', true);
+                            window.location.href = "http://localhost:3000";                       
+                        }
+                    }
+                });
+             });
+        });
+
+    </script>
+
+</head>
+    <body>
+        <div id="overlay-bg">
+            <div id="gradient-bg">
+                <div id="flags-icons">
+                    <ul>
+                        <li><img src="resources/images/login/uk_flag.png" /></li>
+                        <li><img src="resources/images/login/portugal_flag.png" /></li>
+                        <li><img src="resources/images/login/spain_flag.png" /></li>
+                        <li><img src="resources/images/login/france_flag.png" /></li>
+                    </ul>
+
+                </div>
+                    <div id="login-avatar" width="130" height="130">
+                    </div>
+                    <div id="login-header">
+                        <h1>Iniciar Sessão</h1>
+                    </div>
+                <div id="login-wrap">    
+                    <form id="login-form">
+                        <input type="text" id="username" class="login-user" placeholder="Utilizador" />
+                        <input type="password" id="password" placeholder="Palavra-passe" />
+                        <input type="submit" id='btn_submit' value="Login" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="footer"><span>Versão 1.0</span></div>
+    </body>
 </html>

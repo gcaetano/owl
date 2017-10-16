@@ -10,7 +10,7 @@ Ext.define('Owl.model.Profiles', {
     proxy: {
         type: 'ajax',
         api: {
-            read: '/security/profiles'
+            read: '/profiles'
         },
         reader: {
             type: 'json',

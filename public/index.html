@@ -13,17 +13,19 @@
     <script type="text/javascript">
         var lang = localStorage ? (localStorage.getItem('user-lang') || 'en') : 'en';
         var loggedIn = localStorage.getItem('owl-logged-in');
-        if(loggedIn === null) localStorage.setItem('owl-logged-in', false);
-
-        $.i18n.init({
-            lng: lang,
-            fallbackLng: 'en',
-            resGetPath: 'translations/__lng__?v=' + Date.now(),
-            useLocalStorage: true,
-            ns: {
-                namespaces: ['app'], defaultNs: 'app'
-            }
-        });
+        if(loggedIn === null || loggedIn === false) {
+            window.location.href = "http://localhost:3000/login.html";
+        } else {
+            $.i18n.init({
+                lng: lang,
+                fallbackLng: 'en',
+                resGetPath: 'locales/__lng__?v=' + Date.now(),
+                useLocalStorage: true,
+                ns: {
+                    namespaces: ['app'], defaultNs: 'app'
+                }
+            });
+        }
     </script>
 
     <!--
