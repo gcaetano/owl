@@ -23,9 +23,11 @@
                         password: $("#password").val()
                     },
                     success: function(data) {
-                        if(data && data.success) {
+                        if( data && data.success === true) {
                             localStorage.setItem('owl-logged-in', true);
                             window.location.href = "http://localhost:3000";                       
+                        } else {
+                            alert('login failed');
                         }
                     }
                 });

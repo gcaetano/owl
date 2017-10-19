@@ -40,20 +40,20 @@
         height: 250px;
         position: fixed;
         top: 60%;
-        left: 50%;
+        left: 52%;
         transform: translate(-50%, -50%);
         margin: auto;
     }
     #login-header {
         top: 42%;
-        left: 50%;
+        left: 51%;
         position: fixed;
         transform: translate(-50%, -50%);
         margin: auto;
     }
     #login-avatar {
         top: 27%;
-        left: 50%;
+        left: 52%;
         position: fixed;
         transform: translate(-50%, -50%);
         margin: auto;
@@ -163,8 +163,8 @@
     }
     #flags-icons ul li img {
         padding: 5px;
-        width: 30px;
-        height: 20px;
+        width: 15px;
+        height: 10px;
     }
     #flags-icons ul li img:hover {
         cursor:pointer;

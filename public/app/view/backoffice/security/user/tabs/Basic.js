@@ -95,30 +95,6 @@ Ext.define('Owl.view.backoffice.security.user.tabs.Basic', {
                     },
                     valueField: '_id',
                     displayField: 'locale'
-                },
-                {
-                    inputType: 'password',
-                    fieldLabel: $.t('app.password'),
-                    name: 'password',
-                    itemId: 'password',
-                    allowBlank: false,
-                    disabled: true,
-                    listeners: {
-                        validitychange: function(field){
-                            field.next().validate();
-                        },
-                        blur: function(field){
-                            field.next().validate();
-                        }
-                    }
-                },
-                {
-                    name: 'password-confirm',
-                    vtype: 'password',
-                    disabled: true,
-                    initialPassField: 'password', // id of the initial password field
-                    fieldLabel: $.t('app.password confirm'),
-                    visible: false
                 }
             ]
         }

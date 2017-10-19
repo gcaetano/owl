@@ -33,11 +33,12 @@ Ext.define('Owl.Application', {
                     afteranimate: function (el, startTime, eOpts) {
                         var loggedIn = localStorage.getItem('owl-logged-in');
                         if (loggedIn === "false")
-                            Ext.create(
-                                {
-                                    xtype: 'login'
-                                }
-                            );
+                            // Ext.create(
+                            //     {
+                            //         xtype: 'login'
+                            //     }
+                            // );
+                            window.location.href = "http://localhost:3000/login.html";
                         else
                             Ext.create(
                                 {

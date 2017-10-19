@@ -1,5 +1,13 @@
 
-Ext.define('Owl.view.backoffice.security.user.Window',{
+Ext.define('Owl.view.backoffice.security.user.Window', {
+    
+    config: {
+        mode : 'unnamed'
+    },
+
+    itemId : 'userWindow',
+    reference: 'userWindow',
+
     extend: 'Ext.window.Window',
     alias: 'widget.backoffice-security-user-window',
     requires: [
@@ -19,9 +27,8 @@ Ext.define('Owl.view.backoffice.security.user.Window',{
     title: $.t('app.add user'),
     glyph: Owl.util.Glyphs.getGlyph('add_user'),
     resizable: false,
-    height: 440,
+    height: 380,
     width: 500,
-    autoShow: true,
     modal: true,
     items: [
         {

@@ -10,5 +10,4 @@ Ext.define('Owl.view.backoffice.security.west.groups.TreeGroupsController', {
         contextMenu.showAt(event.getXY());
         event.stopEvent();
     }
-
 });

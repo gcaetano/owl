@@ -9,7 +9,7 @@ Ext.define('Owl.model.Locales', {
     proxy: {
         type: 'ajax',
         api: {
-            read: '/security/locale'
+            read: '/locale'
         },
         reader: {
             type: 'json',

@@ -7,43 +7,66 @@
 Ext.define('Owl.view.main.MainController', {
     extend: 'Ext.app.ViewController',
     requires: [
-        'Owl.util.Util'
+        'Owl.util.Util',
+        'Owl.util.Globals'
     ],
 
     alias: 'controller.main',
 
     init: function(application) {
+        var me = this;
         var loggedIn = localStorage.getItem('owl-logged-in');
-        if (loggedIn === "false")
-            Ext.create(
-                {
-                    xtype: 'login'
-                }
-            );
+        if (loggedIn === "true"){
+            Ext.Ajax.request({
+                url: '/security/touch/',
+                scope: me,                  
+                success: 'onTouchSuccess', 
+                failure: 'onTouchFailure'  
+            });
+            Owl.util.SessionMonitor.start();
+        } else {
+            window.location.href = "http://localhost:3000/login.html";
+        }        
     },
 
     onLogout: function(button, e, options){
-        var me = this;                  //#1
+        var me = this;                  
         Ext.Ajax.request({
-            url: '/security/logout',     //#2
-            scope: me,                  //#3
-            success: 'onLogoutSuccess', //#4
-            failure: 'onLogoutFailure'  //#5
+            url: '/security/logout',    
+            scope: me,                  
+            success: 'onLogoutSuccess', 
+            failure: 'onLogoutFailure'  
         });
+    },
+
+    onTouchSuccess: function(conn, response, options, eOpts){
+        console.log("Session Touch Success");
+        localStorage.setItem("owl-logged-in", true);
+        var data = Owl.util.Util.decodeJSON(conn.responseText); 
+        Owl.globals = Ext.create('Owl.util.Globals');
+        Owl.globals.setUser(data.user);
+        var user = this.lookupReference('user')
+        user.setText(data.user.first_name);
+    },
+
+    onTouchFailure: function(conn, response, options, eOpts){
+        console.log("Session Touch Failure");
+        //Owl.util.Util.showErrorMsg(conn.responseText);
     },
 
     onLogoutFailure: function(conn, response, options, eOpts){
         Owl.util.Util.showErrorMsg(conn.responseText);
     },
 
-    onLogoutSuccess: function(conn, response, options, eOpts){ //#1
+    onLogoutSuccess: function(conn, response, options, eOpts){ 
         localStorage.setItem("owl-logged-in", false);
         var result = Owl.util.Util.decodeJSON(conn.responseText);
-        if (result.success) {           //#2
-            this.getView().destroy();   //#3
-            window.location.reload();   //#4
+        if (result.success) {           
+            this.getView().destroy();   
+            // window.location.reload();   
+            window.location.href = "http://localhost:3000/login.html";
         } else {
-            Owl.util.Util.showErrorMsg(result.msg); //#5
+            Owl.util.Util.showErrorMsg(result.msg); 
         }
     },
 
