@@ -1,5 +1,5 @@
 $app-name:  dynamic( 'Owl' );
-$image-search-path: 'C:/Users/gcaetano/Documents/Projects/Visual Studio Code/owl/public/build/development/Owl/resources';
+$image-search-path: '/Users/gcaetano/Development/owl/express-app/owl/public/build/development/Owl/resources';
 $theme-name:  dynamic( 'theme-gray' );
 $include-ext-abstractcomponent: dynamic(true);;
 $include-ext-abstractcontainer: dynamic(true);;
@@ -965,8 +965,8 @@ $include-ext-window-messagebox: dynamic(true);;
 $include-ext-window-toast: dynamic(true);;
 $include-ext-window-window: dynamic(true);;
 $include-owl-application: dynamic(true);;
+$include-owl-model-cultures: dynamic(true);;
 $include-owl-model-groups: dynamic(true);;
-$include-owl-model-locales: dynamic(true);;
 $include-owl-model-profiles: dynamic(true);;
 $include-owl-model-security-user: dynamic(true);;
 $include-owl-store-groups: dynamic(true);;

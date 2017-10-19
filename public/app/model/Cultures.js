@@ -1,4 +1,4 @@
-Ext.define('Owl.model.Locales', {
+Ext.define('Owl.model.Cultures', {
     extend: 'Ext.data.Model',
 
     fields: [
@@ -9,7 +9,7 @@ Ext.define('Owl.model.Locales', {
     proxy: {
         type: 'ajax',
         api: {
-            read: '/locale'
+            read: '/cultures'
         },
         reader: {
             type: 'json',

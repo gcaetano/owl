@@ -22,7 +22,7 @@ Ext.define('Owl.view.backoffice.security.west.groups.PanelController', {
             store.load(function (records, op, success) { //#3
                 Ext.each(records, function (item) { //#4
                     var node = { //#11
-                        text: item.get('text'),
+                        text: $.t('app.' + item.get('text')),
                         leaf: false, //#12
                         glyph: Owl.util.Glyphs.getGlyph('group'),
                         id: item.get('id')

@@ -66,6 +66,7 @@ Ext.define('Owl.view.fleet.map.MapController', {
      * The init method fires before the view is initialized and the markers are loaded from the store
      **/
     init: function () {
+        /*
         var markers = []; // Create and empty markers array
         var client = new WebSocket('ws://127.0.0.1:8080/', 'echo-protocol');
         var me = this;
@@ -119,7 +120,7 @@ Ext.define('Owl.view.fleet.map.MapController', {
 
                 // map.addMarker(marker);
             }
-        }
+        }*/
     },
     /*
      * Method to add a new marker.  This could come from a form and could also use the geocode function

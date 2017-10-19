@@ -2,7 +2,8 @@ Ext.define('Owl.view.backoffice.security.user.tabs.BasicModel', {
     extend: 'Ext.app.ViewModel',
     alias: 'viewmodel.backoffice-security-user-tabs-basic',
     request : [
-        'Owl.model.Profiles'
+        'Owl.model.Profiles',
+        'Owl.model.Cultures'
     ],
 
     stores: {
@@ -10,9 +11,9 @@ Ext.define('Owl.view.backoffice.security.user.tabs.BasicModel', {
             autoLoad: true,
             model: 'Owl.model.Profiles'
         },
-        Locales: {
+        Cultures: {
             autoLoad: true,
-            model: 'Owl.model.Locales'
+            model: 'Owl.model.Cultures'
         }
     }
 });

@@ -6,7 +6,7 @@ Ext.define('Owl.view.backoffice.security.user.tabs.Basic', {
         'Owl.view.backoffice.security.user.tabs.BasicController',
         'Owl.view.backoffice.security.user.tabs.BasicModel',
         'Owl.model.Profiles',
-        'Owl.model.Locales'
+        'Owl.model.Cultures'
     ],
 
     controller: 'backoffice-security-user-tabs-basic',
@@ -66,11 +66,6 @@ Ext.define('Owl.view.backoffice.security.user.tabs.Basic', {
                     bind: '{currentUser.timezone}'
                 },
                 {
-                    fieldLabel: $.t('app.locale'),
-                    name: 'locale',
-                    bind: '{currentUser.locale}'
-                },
-                {
                     xtype: 'combo',
                     name: 'profile',
                     fieldLabel: $.t('app.profile'),
@@ -85,16 +80,16 @@ Ext.define('Owl.view.backoffice.security.user.tabs.Basic', {
                 },
                 {
                     xtype: 'combo',
-                    name: 'locales',
-                    fieldLabel: $.t('app.locale'),
+                    name: 'cultures',
+                    fieldLabel: $.t('app.culture'),
                     queryMode: 'local',
                     forceSelection: true,
                     editable: false,
                     bind: {
-                        store: '{Locales}'
+                        store: '{Cultures}'
                     },
                     valueField: '_id',
-                    displayField: 'locale'
+                    displayField: 'alias'
                 }
             ]
         }
