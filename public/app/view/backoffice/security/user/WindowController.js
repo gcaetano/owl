@@ -3,21 +3,18 @@ Ext.define('Owl.view.backoffice.security.user.WindowController', {
     alias: 'controller.backoffice-security-user-window',
 
     init: function(application) {
-        // var me = this;
-
-        // var mode = me.getMode().getView().getMode();
-
-        // console.log(mode);
-
-        // var trees = Ext.ComponentQuery.query('treepanel#treeGroups');
-        // if(trees && trees.length > 0) {
-        //     var treeGroups = trees[0];
-        //     var items = treeGroups.getSelectionModel().selected.items;
-        //     if(items.length > 0) {
-        //         var group = items[0].data;
-        //         // me.getView().setTitle(group.text);
-        //     }
-        // }        
+        var me = this;
+        var trees = Ext.ComponentQuery.query('treepanel#treeGroups');
+        if(trees && trees.length > 0) {
+            var treeGroups = trees[0];
+            var items = treeGroups.getSelectionModel().selected.items;
+            if(items.length > 0) {
+                var group = items[0].data;
+                var tab = me.lookupReference('userBasicPanel');
+                var cbxGroup = tab.lookupReference('group');
+                cbxGroup.setValue(group.id);
+            }
+        }
     },
 
     onSave: function(button, e, options) {
@@ -26,7 +23,7 @@ Ext.define('Owl.view.backoffice.security.user.WindowController', {
         if (form && form.isValid()) {
             form.submit({
                 clientValidation: true,
-                url: '/user',
+                url: '/users',
                 scope: me,
                 success: 'onSaveSuccess',
                 failure: 'onSaveFailure'

@@ -27,7 +27,7 @@ router.get('/', (req, res, next) => {
  * Retrieves a specific resource
  */
 router.get('/:id',(req, res, next) => {
-    logger.info("ROU | [GET] /%s/id params %j", resource, req.params);
+    logger.info("ROU [%s] [GET] /%s/id params %j", req.sessionID, resource, req.params);
     if(req.params && req.params.id){
         BL_Users.readOne(req, req.params.id, function (err, data) {
             var result = {success: !err, data: data || []};
@@ -42,7 +42,7 @@ router.get('/:id',(req, res, next) => {
  */
 
 router.post('/',(req, res, next) => {
-    logger.info("ROU | [POST] /%s %j", resource, req.body);
+    logger.info("ROU [%s] [POST] /%s %j", req.sessionID, resource, req.body);
     if(req.body && req.body !== {}){
         BL_Users.create(req, req.body, (err, insert) => {
             var response = {success: !err, message: err ? err.errmsg : insert}
@@ -51,7 +51,7 @@ router.post('/',(req, res, next) => {
         });
     } else {
         var message = 'bady seems empty or invalid';
-        logger.error("ROU | [POST] /%s body %j | %s", resource, req.body, message);        
+        logger.error("ROU [%s] [POST] /%s body %j | %s", req.sessionID, resource, req.body, message);        
         res.status(200).send({success: false, message: message});
         res.end();
     }
@@ -62,7 +62,7 @@ router.post('/',(req, res, next) => {
  */
 
 router.put('/:id', function (req, res) {
-    logger.info("ROU | [PUT] /%s", resource);
+    logger.info("ROU [%s] [PUT] /%s", req.sessionID, resource);
     // res.status(200).send(req.body + " " + req.params.id);
     // res.end();     
     
@@ -79,7 +79,7 @@ router.put('/:id', function (req, res) {
  * Delete a resource
  */
 router.delete('/:id', function (req, res) {
-    logger.info("ROU | [DELETE] /%s/id %j", resource, req.params);
+    logger.info("ROU [%s] [DELETE] /%s/id %j", req.sessionID, resource, req.params);
     if(req.params && req.params.id){
         BL_Users.delete(req, req.params.id, function (err, remove) {
             var result = {success: !err, message: remove || []};

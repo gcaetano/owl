@@ -27,9 +27,10 @@ Ext.define('Owl.view.backoffice.security.user.Window', {
     title: $.t('app.add user'),
     glyph: Owl.util.Glyphs.getGlyph('add_user'),
     resizable: false,
-    height: 380,
-    width: 500,
+    height: 350,
+    width: 600,
     modal: true,
+    closeAction: 'destroy',
     items: [
         {
             xtype: 'tabpanel',

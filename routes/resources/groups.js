@@ -16,6 +16,17 @@ router.get('/', (req, res, next) => {
     logger.info("ROU [%s] [GET] /%s", req.sessionID, resource);
 
     BL_Groups.read(req, options, function (err, data) {
+        var result = {success: !err, data: data || []};
+        res.status(200).send(result);
+        res.end();
+    })
+});
+
+router.get('/tree', (req, res, next) => {
+    var options = req.query ? Helper.getReadOptions(req.query): {}
+    logger.info("ROU [%s] [GET] /%s", req.sessionID, resource);
+
+    BL_Groups.tree(req, options, function (err, data) {
         var result = {success: !err, children: data || []};
         res.status(200).send(result);
         res.end();

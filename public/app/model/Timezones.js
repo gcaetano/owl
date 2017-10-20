@@ -1,4 +1,4 @@
-Ext.define('Owl.model.Cultures', {
+Ext.define('Owl.model.Timezones', {
     extend: 'Ext.data.Model',
 
     fields: [
@@ -9,7 +9,7 @@ Ext.define('Owl.model.Cultures', {
     proxy: {
         type: 'ajax',
         api: {
-            read: '/cultures'
+            read: '/timezones/?limit=150'
         },
         reader: {
             type: 'json',

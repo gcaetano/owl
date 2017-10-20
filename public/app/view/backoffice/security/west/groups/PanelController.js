@@ -27,6 +27,18 @@ Ext.define('Owl.view.backoffice.security.west.groups.PanelController', {
                         glyph: Owl.util.Glyphs.getGlyph('group'),
                         id: item.get('id')
                     };
+
+                    if(item.data.users !== undefined) {                        
+                        node.children = [];
+                        Ext.each(item.data.users, function (user) { //#4
+                            let leaf = {
+                                leaf: true, //#12
+                                text: user,
+                                glyph: Owl.util.Glyphs.getGlyph('user'),
+                            }
+                            node.children.push(leaf);
+                        });
+                    }
                     tree.getRootNode().appendChild(node); //#14
                 });
             });

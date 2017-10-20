@@ -1,8 +1,17 @@
 Ext.define('Owl.model.Groups', {
-    extend: 'Ext.data.TreeModel',
+    extend: 'Ext.data.Model',
 
     fields: [
-        'id', 'alias'
+        { 
+            type: 'string', 
+            name: 'alias',            
+            convert : function(value, record) {
+                //Your logic to convert the old name(value) into new name.
+                return $.t('app.'+ value);
+            }    
+        },
+
+        { type: 'string', name: '_id' },
     ],
 
     autoLoad: true,
@@ -13,7 +22,7 @@ Ext.define('Owl.model.Groups', {
         },
         reader: {
             type: 'json',
-            rootProperty: 'children'
+            rootProperty: 'data'
         }
     }
 });

@@ -13,7 +13,7 @@ Ext.define('Owl.store.Groups', {
     proxy: {
         type: 'ajax',
         api: {
-            read: '/groups'
+            read: '/groups/tree'
         },
         reader: {
             type: 'json',

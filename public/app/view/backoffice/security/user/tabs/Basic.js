@@ -6,13 +6,17 @@ Ext.define('Owl.view.backoffice.security.user.tabs.Basic', {
         'Owl.view.backoffice.security.user.tabs.BasicController',
         'Owl.view.backoffice.security.user.tabs.BasicModel',
         'Owl.model.Profiles',
-        'Owl.model.Cultures'
+        'Owl.model.Cultures',
+        'Owl.model.Timezones',
+        'Owl.model.Groups'
     ],
 
     controller: 'backoffice-security-user-tabs-basic',
     viewModel: {
         type: 'backoffice-security-user-tabs-basic'
     },
+    itemId: 'userBasicPanel',
+    reference: 'userBasicPanel', // me.lookupReference('userBasicPanel')
     title: $.t('app.basic info'),
     border: false,
     items: [
@@ -28,8 +32,9 @@ Ext.define('Owl.view.backoffice.security.user.tabs.Basic', {
             defaults: {
                 //afterLabelTextTpl: Owl.util.Util.required,
                 anchor: '100%',
+                labelAlign: 'right', 
                 xtype: 'textfield',
-                labelWidth: 150,
+                labelWidth: 120,
                 allowBlank: false
             },
             items: [
@@ -41,17 +46,17 @@ Ext.define('Owl.view.backoffice.security.user.tabs.Basic', {
                 },
                 {
                     fieldLabel: $.t('app.username'),
-                    name: 'userName',
+                    name: 'username',
                     bind: '{currentUser.userName}'
                 },
                 {
                     fieldLabel: $.t('app.first name'),
-                    name: 'firstName',
+                    name: 'first_name',
                     bind: '{currentUser.firstName}'
                 },
                 {
                     fieldLabel: $.t('app.last name'),
-                    name: 'lastName',
+                    name: 'last_name',
                     bind: '{currentUser.lastName}'
                 },
                 {
@@ -61,9 +66,33 @@ Ext.define('Owl.view.backoffice.security.user.tabs.Basic', {
                     vtype: 'email'
                 },
                 {
-                    fieldLabel: $.t('app.timezone'),
+                    xtype: 'combo',
                     name: 'timezone',
-                    bind: '{currentUser.timezone}'
+                    fieldLabel: $.t('app.timezone'),
+                    queryMode: 'local',
+                    forceSelection: true,
+                    editable: false,
+                    width: 250,                   
+                    bind: {
+                        store: '{Timezones}'
+                    },
+                    valueField: '_id',
+                    displayField: 'alias'
+                },
+                {
+                    xtype: 'combo',
+                    name: 'group',
+                    itemId: 'group', // Ext.ComponentQuery.query('combo#group');
+                    reference: 'group',
+                    fieldLabel: $.t('app.group'),
+                    queryMode: 'local',
+                    forceSelection: true,
+                    editable: false,
+                    bind: {
+                        store: '{Groups}'
+                    },
+                    valueField: '_id',
+                    displayField: 'alias'
                 },
                 {
                     xtype: 'combo',
@@ -80,7 +109,7 @@ Ext.define('Owl.view.backoffice.security.user.tabs.Basic', {
                 },
                 {
                     xtype: 'combo',
-                    name: 'cultures',
+                    name: 'culture',
                     fieldLabel: $.t('app.culture'),
                     queryMode: 'local',
                     forceSelection: true,
