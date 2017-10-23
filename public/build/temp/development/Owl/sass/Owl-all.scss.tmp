@@ -1,5 +1,5 @@
 $app-name:  dynamic( 'Owl' );
-$image-search-path: 'C:/Users/gcaetano/Documents/Projects/Visual Studio Code/owl/public/build/development/Owl/resources';
+$image-search-path: '/Users/gcaetano/Development/owl/express-app/owl/public/build/development/Owl/resources';
 $theme-name:  dynamic( 'theme-gray' );
 $include-ext-abstractcomponent: dynamic(true);;
 $include-ext-abstractcontainer: dynamic(true);;

@@ -1,4 +1,3 @@
-
 Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroups',{
     extend: 'Ext.menu.Menu',
     alias: 'widget.permission-security-context-menu-groups',
@@ -15,24 +14,33 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroups',{
 
     items: [
         {
+            itemId: 'addSubGroup',
+            reference: 'addSubGroup',
             text: $.t('app.add sub-group'),
+            enable: false,
             glyph: Owl.util.Glyphs.getGlyph('group'),
             listeners : {
                 click: 'onAddSubGroup'
             }
         },{
+            itemId: 'addUser',
+            reference: 'addUser',
             text: $.t('app.add user'),
             glyph: Owl.util.Glyphs.getGlyph('add_user'),
             listeners : {
                 click: 'onAddUser'
             }
         },{
+            itemId: 'editUser', 
+            reference: 'editUser',            
             text: $.t('app.edit user'),
             glyph: Owl.util.Glyphs.getGlyph('edit'),
             listeners : {
                 click: 'onEditUser'
             }
         },{
+            itemId: 'delUser',             
+            reference: 'delUser',                  
             text: $.t('app.delete user'),
             glyph: Owl.util.Glyphs.getGlyph('del_user'),
             listeners : {

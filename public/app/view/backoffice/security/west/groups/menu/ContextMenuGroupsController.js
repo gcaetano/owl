@@ -72,7 +72,7 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroupsContr
     onRemoveUserSuccess: function(conn, response, options, eOpts){
         me = this;
         Ext.getBody().unmask();        
-        var result = Ext.JSON. decode(response.responseText, true); //"{"success":true,"message":{"user":"59ee0cc86e670539a8f2c5b2","group":"59df82bdc638ae293c1c62b9"}}"
+        // var result = Ext.JSON. decode(response.responseText, true); //"{"success":true,"message":{"user":"59ee0cc86e670539a8f2c5b2","group":"59df82bdc638ae293c1c62b9"}}"
         me.detachUserFromGroup();
         Owl.util.Util.showToast('The user was removed!');
     },

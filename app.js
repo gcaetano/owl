@@ -40,7 +40,7 @@ MongoDb.openOwlConnection(function (db) {
 
     var store = new MongoDBStore(
         {
-            uri: 'mongodb://10.0.0.122:27017/owl',
+            uri: 'mongodb://127.0.0.1:27017/owl',
             collection: 'sessions'
         });
 
