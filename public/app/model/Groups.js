@@ -11,7 +11,7 @@ Ext.define('Owl.model.Groups', {
             }    
         },
 
-        { type: 'string', name: '_id' },
+        { type: 'string', name: '_id' }
     ],
 
     autoLoad: true,
