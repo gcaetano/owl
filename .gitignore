@@ -16,3 +16,5 @@
 node_modules/
 public/build
 logs/
+.DS_Store
+routes/.DS_Store
