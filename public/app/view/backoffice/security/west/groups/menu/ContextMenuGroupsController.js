@@ -27,23 +27,33 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroupsContr
 
     onDelUser : function (menu, item, e, eOpts){
         var me = this;
-        debugger;
-        Ext.MessageBox.confirm('Delete', 'The user will removed, do you confirm?', function(btn){
-            if(btn === 'yes'){
-                var trees = Ext.ComponentQuery.query('treepanel#treeGroups');
-                if(trees && trees.length > 0) {
-                    var treeGroups = trees[0];
-                    var items = treeGroups.getSelectionModel().selected.items;
-                    if(items.length > 0) {
-                        debugger;
-                        var userId = items[0].data.id;
-                        Ext.Ajax.request({
-                            url: Ext.String.format('/user/?id={0}', userId),
-                            method: 'DELETE',
-                            scope: me,                  
-                            success: 'onTouchSuccess', 
-                            failure: 'onTouchFailure'  
-                        });
+
+        Ext.Msg.show({
+            title : 'Remove',
+            width : 320,
+            height : 120,
+            msg : 'Removing user, do you confirm?',
+            closable : false,
+            buttons : Ext.Msg.YESCANCEL,
+            buttonText :  { yes : 'Yes', cancel : 'Cancel' },
+            fn : function(btn, inputText, showConfig){
+                if(btn === 'yes'){
+                    Ext.getBody().mask('Please whait!')
+                    var trees = Ext.ComponentQuery.query('treepanel#treeGroups');
+                     if(trees && trees.length > 0) {
+                        var treeGroups = trees[0];
+                        var items = treeGroups.getSelectionModel().selected.items;
+                        if(items.length > 0) {
+                            var idUser = items[0].data.id;
+                            var idGroup = items[0].parentNode.data.id;
+                            Ext.Ajax.request({
+                                url: Ext.String.format('/users/{0}/{1}', idUser, idGroup),
+                                method: 'DELETE',
+                                scope: me,                  
+                                success: 'onRemoveUserSuccess', 
+                                failure: 'onRemoveUserFailure'  
+                            });
+                        }
                     }
                 }
             }
@@ -57,5 +67,32 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroupsContr
         window.setTitle(title);
         window.setGlyph(glyph);
         window.show();
+    },
+
+    onRemoveUserSuccess: function(conn, response, options, eOpts){
+        me = this;
+        Ext.getBody().unmask();        
+        var result = Ext.JSON. decode(response.responseText, true); //"{"success":true,"message":{"user":"59ee0cc86e670539a8f2c5b2","group":"59df82bdc638ae293c1c62b9"}}"
+        me.detachUserFromGroup();
+        Owl.util.Util.showToast('The user was removed!');
+    },
+
+    onRemoveUserFailure: function(conn, response, options, eOpts) {
+        // this.getView().unmask();
+        Owl.util.showErrorMsg('There was a server error!');
+    },
+
+    detachUserFromGroup : function() {
+        var trees = Ext.ComponentQuery.query('treepanel#treeGroups');
+        if(trees && trees.length > 0) {
+            var treeGroups = trees[0];
+            var items = treeGroups.getSelectionModel().selected.items;
+            
+            if(items.length > 0) {
+                var user = items[0];
+                var group = items[0].parentNode;
+                group.removeChild(user);
+           }
+        }
     }
 });

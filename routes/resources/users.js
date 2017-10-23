@@ -2,6 +2,7 @@ var express = require('express'),
     router = express.Router(),
     logger = require('../../lib/utillity/logger'),
     BL_Users = require('../../lib/business/users').BL_Users,
+    BL_Groups = require('../../lib/business/groups').BL_Groups,
     Helper = require('../../lib/utillity/helper').Helper;
 
 
@@ -85,6 +86,28 @@ router.delete('/:id', function (req, res) {
             var result = {success: !err, message: remove || []};
             res.status(200).send(result);
             res.end();        
+        });
+    }
+});
+
+/**
+ * Delete a resource
+ */
+router.delete('/:idUser/:idGroup', function (req, res) {
+    logger.info("ROU [%s] [DELETE] /%s/idUser/idGroup %j", req.sessionID, resource, req.params);
+    if(req.params && req.params.idUser && req.params.idGroup){
+        BL_Users.delete(req, req.params.idUser, function (err, removeUser) {
+            if(!err) {           
+                BL_Groups.popUser(req, req.params.idGroup, req.params.idUser, function(errGroup, remove){
+                    var result = {success: !errGroup, message: remove ? {user: req.params.idUser, group: req.params.idGroup } : errGroup.message};
+                    res.status(200).send(result);
+                    res.end();
+                 });
+            } else {
+                var result = {success: !err, message: err.message};
+                res.status(200).send(result);
+                res.end();   
+            }
         });
     }
 });

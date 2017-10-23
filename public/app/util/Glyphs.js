@@ -18,7 +18,8 @@ Ext.define('Owl.util.Glyphs', {
         add_user: 'xf234',
         del_user: 'xf235',
         shield: 'xf132',
-        registered: 'xf25d'
+        registered: 'xf25d',
+        refresh: 'xf021'
     },
     constructor: function(config) {
         this.initConfig(config);

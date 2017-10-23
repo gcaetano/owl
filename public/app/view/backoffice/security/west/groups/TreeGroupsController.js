@@ -16,7 +16,6 @@ Ext.define('Owl.view.backoffice.security.west.groups.TreeGroupsController', {
     },
 
     onTreeRender: function(view, options) {
-        console.log('rendeing tree!');
         var store = Ext.create('Owl.store.Groups');
         if (store !== undefined) {
             store.load(function (records, op, success) { //#3
@@ -34,6 +33,7 @@ Ext.define('Owl.view.backoffice.security.west.groups.TreeGroupsController', {
                             node.children.push({
                                 leaf: true, //#12
                                 text: user,
+                                id : user,
                                 glyph: Owl.util.Glyphs.getGlyph('user')
                             });
                         });

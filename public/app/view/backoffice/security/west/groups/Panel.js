@@ -29,6 +29,15 @@ Ext.define('Owl.view.backoffice.security.west.groups.Panel',{
             xtype: 'toolbar',
             dock: 'bottom',
             items: [
+                {
+                    xtype: 'button',
+                    itemId: 'refreshGroup',
+                    reference: 'refreshGroup',
+                    glyph: Owl.util.Glyphs.getGlyph('refresh'),
+                    listeners: {
+                        click: 'onRefreshGroupClick'
+                    }
+                },
                 '->',
                 {
                     xtype: 'button',
