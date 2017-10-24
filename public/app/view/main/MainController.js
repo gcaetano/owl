@@ -40,7 +40,6 @@ Ext.define('Owl.view.main.MainController', {
     },
 
     onTouchSuccess: function(conn, response, options, eOpts){
-        console.log("Session Touch Success");
         localStorage.setItem("owl-logged-in", true);
         var data = Owl.util.Util.decodeJSON(conn.responseText); 
         Owl.globals = Ext.create('Owl.util.Globals');

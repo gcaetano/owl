@@ -33,8 +33,17 @@ Ext.define('Owl.view.backoffice.security.west.groups.TreeGroupsController', {
                             node.children.push({
                                 user: true,
                                 leaf: true, //#12
-                                text: user,
-                                id : user,
+                                text: Ext.String.format("{0} {1}", user.first_name, user.last_name),
+                                id : user._id,
+
+                                username  : user.username,
+                                first_name : user.first_name,
+                                last_name : user.last_name,
+                                email : user.email,
+                                timezone : user.timezone,
+                                profile : user.profile,
+                                culture : user.culture,
+
                                 glyph: Owl.util.Glyphs.getGlyph('user')
                             });
                         });
