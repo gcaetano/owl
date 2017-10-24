@@ -38,7 +38,7 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroupsContr
             buttonText :  { yes : 'Yes', cancel : 'Cancel' },
             fn : function(btn, inputText, showConfig){
                 if(btn === 'yes'){
-                    Ext.getBody().mask('Please whait!')
+                    Ext.getBody().mask('Please whait!');
                     var trees = Ext.ComponentQuery.query('treepanel#treeGroups');
                      if(trees && trees.length > 0) {
                         var treeGroups = trees[0];

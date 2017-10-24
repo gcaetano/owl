@@ -2,6 +2,7 @@
 Ext.define('Owl.view.user.tabs.basic.Basic',{
     extend: 'Ext.panel.Panel',
     alias: 'widget.user-tabs-basic',
+    itemId: 'userTabBasic',
     config: {
         securityLevel: 2 //Super Administrators
     },
