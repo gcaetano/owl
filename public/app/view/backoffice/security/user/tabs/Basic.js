@@ -41,28 +41,23 @@ Ext.define('Owl.view.backoffice.security.user.tabs.Basic', {
                 {
                     xtype: 'hiddenfield',
                     name: '_id', //#8
-                    fieldLabel: 'Label',
-                    bind: '{currentUser._id}' //#9
+                    fieldLabel: 'Label'
                 },
                 {
                     fieldLabel: $.t('app.username'),
-                    name: 'username',
-                    bind: '{currentUser.userName}'
+                    name: 'username'
                 },
                 {
                     fieldLabel: $.t('app.first name'),
-                    name: 'first_name',
-                    bind: '{currentUser.firstName}'
+                    name: 'first_name'
                 },
                 {
                     fieldLabel: $.t('app.last name'),
-                    name: 'last_name',
-                    bind: '{currentUser.lastName}'
+                    name: 'last_name'
                 },
                 {
                     fieldLabel: $.t('app.email'),
                     name: 'email',
-                    bind: '{currentUser.email}',
                     vtype: 'email'
                 },
                 {

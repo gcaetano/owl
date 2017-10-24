@@ -59,15 +59,23 @@ Ext.define('Owl.view.backoffice.security.user.WindowController', {
             if(items.length > 0) {
                 var group = items[0]; // is the group
                 if(form){
-                    var firstName = form.findField("first_name").getValue();
-                    var lastname = form.findField("last_name").getValue();
                     var node = {
-                        id : id,
                         user: true,
-                        leaf: true, 
-                        text: Ext.String.format('{0} {1}', firstName, lastname),
-                        glyph: Owl.util.Glyphs.getGlyph('user')
-                    }
+                        leaf: true,
+                        text: Ext.String.format("{0} {1}", user.first_name, user.last_name),
+                        _id : id,
+                        glyph: Owl.util.Glyphs.getGlyph('user'),
+
+                        username  : form.findField("username").getValue(),
+                        first_name : form.findField("first_name").getValue(),
+                        last_name : form.findField("last_name").getValue(),
+                        email : form.findField("email").getValue(),
+                        group : form.findField("group").getValue(),
+                        timezone : form.findField("timezone").getValue(),
+                        profile : form.findField("profile").getValue(),
+                        culture : form.findField("culture").getValue()
+
+                    };
                     group.appendChild(node);
                 }
             }

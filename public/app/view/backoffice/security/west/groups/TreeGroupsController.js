@@ -34,7 +34,7 @@ Ext.define('Owl.view.backoffice.security.west.groups.TreeGroupsController', {
                                 user: true,
                                 leaf: true, //#12
                                 text: Ext.String.format("{0} {1}", user.first_name, user.last_name),
-                                id : user._id,
+                                _id : user._id,
 
                                 username  : user.username,
                                 first_name : user.first_name,

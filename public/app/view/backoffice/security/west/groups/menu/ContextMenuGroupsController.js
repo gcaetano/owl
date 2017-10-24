@@ -23,6 +23,9 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroupsContr
         var glyph = Owl.util.Glyphs.getGlyph('edit');
         var title = $.t('app.add user')
         var window = me.showWindow(title, glyph);
+        var form = window.down('form').getForm();
+        var selection = me.getTreeSelectedItem();
+        form.loadRecord(selection);
     },
 
     onDelUser : function (menu, item, e, eOpts){
@@ -67,6 +70,7 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroupsContr
         window.setTitle(title);
         window.setGlyph(glyph);
         window.show();
+        return window;
     },
 
     onRemoveUserSuccess: function(conn, response, options, eOpts){
@@ -83,16 +87,30 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroupsContr
     },
 
     detachUserFromGroup : function() {
+        // var trees = Ext.ComponentQuery.query('treepanel#treeGroups');
+        // if(trees && trees.length > 0) {
+        //     var treeGroups = trees[0];
+        //     var items = treeGroups.getSelectionModel().selected.items;
+            
+        //     if(items.length > 0) {
+        //         var user = items[0];
+        //         var group = items[0].parentNode;
+        //         group.removeChild(user);
+        //    }
+        // }
+        var user = me.getTreeSelectedItem();
+        var group = user.parentNode;
+        group.removeChild(user);
+    },
+
+    getTreeSelectedItem: function (){
         var trees = Ext.ComponentQuery.query('treepanel#treeGroups');
+        var selection;
         if(trees && trees.length > 0) {
             var treeGroups = trees[0];
             var items = treeGroups.getSelectionModel().selected.items;
-            
-            if(items.length > 0) {
-                var user = items[0];
-                var group = items[0].parentNode;
-                group.removeChild(user);
-           }
+            selection = items[0];
         }
+        return selection;
     }
 });
