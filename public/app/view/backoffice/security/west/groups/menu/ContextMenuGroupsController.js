@@ -7,6 +7,10 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroupsContr
         'Owl.util.Util'
     ],
 
+    onAddNewGroup : function (menu, item, e, eOpts ){
+        console.log('onAddSubGroup not implemented');
+    },
+
     onAddSubGroup : function (menu, item, e, eOpts ){
         console.log('onAddSubGroup not implemented');
     },
@@ -15,16 +19,41 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroupsContr
         var me = this;
         var glyph = Owl.util.Glyphs.getGlyph('add_user');
         var title = $.t('app.add user')
-        var window = me.showWindow(title, glyph);
+        var window = me.getWindow(title, glyph);
+
+        window.setTitle(title);
+        window.setGlyph(glyph);
+        window.show();
+
+
+        me.hideButtons(window);
+        var save = window.lookupReference('buttonSave');
+        if(save) save.show();
+
+        // set the selected group to combo
+        var selection = me.getTreeSelectedItem();
+        var tab = window.lookupReference('userBasicPanel');
+
+        var cbxGroup = tab.lookupReference('group');
+        cbxGroup.setValue(selection.get("_id"));        
     },
 
     onEditUser : function (menu, item, e, eOpts){
         var me = this;
         var glyph = Owl.util.Glyphs.getGlyph('edit');
         var title = $.t('app.add user')
-        var window = me.showWindow(title, glyph);
+        var window = me.getWindow(title, glyph);
+
+        window.setTitle(title);
+        window.setGlyph(glyph);
+        window.show();
+        
+        me.hideButtons(window);
+        var edit = window.lookupReference('buttonEdit');
+        if(edit) edit.show();
+
         var form = window.down('form').getForm();
-        var selection = me.getTreeSelectedItem();
+        var selection = me.getTreeSelectedItem();        
         form.loadRecord(selection);
     },
 
@@ -47,8 +76,8 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroupsContr
                         var treeGroups = trees[0];
                         var items = treeGroups.getSelectionModel().selected.items;
                         if(items.length > 0) {
-                            var idUser = items[0].data.id;
-                            var idGroup = items[0].parentNode.data.id;
+                            var idUser = items[0].data._id;
+                            var idGroup = items[0].parentNode.data._id;
                             Ext.Ajax.request({
                                 url: Ext.String.format('/users/{0}/{1}', idUser, idGroup),
                                 method: 'DELETE',
@@ -63,13 +92,10 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroupsContr
         });
     },
 
-    showWindow: function(title, glyph){
+    getWindow: function(title, glyph){
         var me = this;
         var ref = Ext.ComponentQuery.query('window#userWindow');
         var window = ref.lenght > 0 ? ref[0] : Ext.create({xtype: 'backoffice-security-user-window'});
-        window.setTitle(title);
-        window.setGlyph(glyph);
-        window.show();
         return window;
     },
 
@@ -87,17 +113,7 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroupsContr
     },
 
     detachUserFromGroup : function() {
-        // var trees = Ext.ComponentQuery.query('treepanel#treeGroups');
-        // if(trees && trees.length > 0) {
-        //     var treeGroups = trees[0];
-        //     var items = treeGroups.getSelectionModel().selected.items;
-            
-        //     if(items.length > 0) {
-        //         var user = items[0];
-        //         var group = items[0].parentNode;
-        //         group.removeChild(user);
-        //    }
-        // }
+        me = this;
         var user = me.getTreeSelectedItem();
         var group = user.parentNode;
         group.removeChild(user);
@@ -112,5 +128,12 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroupsContr
             selection = items[0];
         }
         return selection;
+    },
+
+    hideButtons: function (window){
+        var save = window.lookupReference('buttonSave');
+        if(save) save.hide();
+        var edit = window.lookupReference('buttonEdit');
+        if(edit) edit.hide();
     }
 });

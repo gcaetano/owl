@@ -24,7 +24,7 @@ Ext.define('Owl.view.backoffice.security.west.groups.TreeGroupsController', {
                         text: $.t('app.' + item.get('text')),
                         leaf: item.data.users === undefined, //#12
                         glyph: Owl.util.Glyphs.getGlyph('group'),
-                        id: item.get('id')
+                        _id: item.get('_id')
                     };
 
                     if(item.data.users !== undefined) {                        
@@ -35,7 +35,6 @@ Ext.define('Owl.view.backoffice.security.west.groups.TreeGroupsController', {
                                 leaf: true, //#12
                                 text: Ext.String.format("{0} {1}", user.first_name, user.last_name),
                                 _id : user._id,
-
                                 username  : user.username,
                                 first_name : user.first_name,
                                 last_name : user.last_name,
@@ -43,6 +42,7 @@ Ext.define('Owl.view.backoffice.security.west.groups.TreeGroupsController', {
                                 timezone : user.timezone,
                                 profile : user.profile,
                                 culture : user.culture,
+                                group : user.group,
 
                                 glyph: Owl.util.Glyphs.getGlyph('user')
                             });

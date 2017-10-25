@@ -1,7 +1,7 @@
 var express = require('express'),
     router = express.Router(),
     BL_Users = require('../lib/business/users').BL_Users,
-    logger = require('../lib/utillity/logger'),
+    logger = require('../lib/utility/logger'),
     profiles = require('../lib/business/profiles').Profiles;
     groups = require('../lib/business/groups').Groups;
 

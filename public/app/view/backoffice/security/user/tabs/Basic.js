@@ -40,7 +40,7 @@ Ext.define('Owl.view.backoffice.security.user.tabs.Basic', {
             items: [
                 {
                     xtype: 'hiddenfield',
-                    name: '_id', //#8
+                    name: '_id',
                     fieldLabel: 'Label'
                 },
                 {

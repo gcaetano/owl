@@ -6,8 +6,6 @@ Ext.define('Owl.view.backoffice.security.user.Window', {
     },
 
     itemId : 'userWindow',
-    reference: 'userWindow',
-
     extend: 'Ext.window.Window',
     alias: 'widget.backoffice-security-user-window',
     requires: [
@@ -27,10 +25,10 @@ Ext.define('Owl.view.backoffice.security.user.Window', {
     title: $.t('app.add user'),
     glyph: Owl.util.Glyphs.getGlyph('add_user'),
     resizable: false,
+    closable: false,
     height: 350,
     width: 600,
     modal: true,
-    closeAction: 'destroy',
     items: [
         {
             xtype: 'tabpanel',
@@ -53,15 +51,27 @@ Ext.define('Owl.view.backoffice.security.user.Window', {
             items: [
                 {
                     xtype: 'button',
-                    text: 'Save',
+                    text: $.t('app.save'),
+                    hidden: true,
+                    reference: 'buttonSave',
                     glyph: Owl.util.Glyphs.getGlyph('save'),
                     listeners: {
                         click: 'onSave'
                     }
+                },                {
+                    xtype: 'button',
+                    text: $.t('app.edit'),
+                    hidden: true,
+                    reference: 'buttonEdit',
+                    glyph: Owl.util.Glyphs.getGlyph('save'),
+                    listeners: {
+                        click: 'onEdit'
+                    }
                 },
                 {
                     xtype: 'button',
-                    text: 'Cancel',
+                    text: $.t('app.cancel'),
+                    reference: 'buttonCancel',
                     glyph: Owl.util.Glyphs.getGlyph('cancel'),
                     listeners: {
                         click: 'onCancel'

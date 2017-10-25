@@ -14,6 +14,16 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroups',{
 
     items: [
         {
+            itemId: 'addNewGroup',
+            reference: 'addNewGroup',
+            text: $.t('app.add new group'),
+            enable: false,
+            glyph: Owl.util.Glyphs.getGlyph('group'),
+            listeners : {
+                click: 'onAddNewGroup'
+            }
+        },
+        {
             itemId: 'addSubGroup',
             reference: 'addSubGroup',
             text: $.t('app.add sub-group'),
@@ -22,7 +32,7 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroups',{
             listeners : {
                 click: 'onAddSubGroup'
             }
-        },{
+        }, {
             itemId: 'addUser',
             reference: 'addUser',
             text: $.t('app.add user'),

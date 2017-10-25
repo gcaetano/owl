@@ -4,10 +4,10 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+
+var settings = require('./lib/utility/settings');
 var locales = require('./routes/locales');
 var security = require('./routes/security');
-
-
 var groups = require('./routes/resources/groups');
 var users = require('./routes/resources/users');
 var profiles = require('./routes/resources/profiles');
@@ -19,6 +19,7 @@ var fuel = require('./routes/resources/fuel');
 var session = require('express-session');
 var MongoDBStore = require('connect-mongodb-session')(session);
 var uid = require('uid-safe');
+var util = require('util');
 
 var app = express();
 
@@ -40,7 +41,7 @@ MongoDb.openOwlConnection(function (db) {
 
     var store = new MongoDBStore(
         {
-            uri: 'mongodb://127.0.0.1:27017/owl',
+            uri: util.format('mongodb://%s:%s/owl', settings.mongo.database.owl.host, settings.mongo.database.owl.port),
             collection: 'sessions'
         });
 

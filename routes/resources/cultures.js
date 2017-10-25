@@ -1,8 +1,8 @@
 var express = require('express'),
     router = express.Router(),
-    logger = require('../../lib/utillity/logger'),
+    logger = require('../../lib/utility/logger'),
     BL_Cultures = require('../../lib/business/cultures').BL_Cultures,
-    Helper = require('../../lib/utillity/helper').Helper;
+    Helper = require('../../lib/utility/helper').Helper;
 
 
  const  resource = 'cultures';

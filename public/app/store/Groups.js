@@ -6,7 +6,7 @@ Ext.define('Owl.store.Groups', {
     storeId : 'groupsStore',
 
     fields: [
-        'id', 'alias'
+        '_id', 'alias'
     ],
     autoLoad: false,
 
