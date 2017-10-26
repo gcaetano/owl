@@ -96,17 +96,6 @@ Ext.define('Owl.view.backoffice.security.user.WindowController', {
         group.removeChild(user);
     },
 
-    getTreeSelectedItem: function () {
-        var trees = Ext.ComponentQuery.query('treepanel#treeGroups');
-        var selection;
-        if (trees && trees.length > 0) {
-            var treeGroups = trees[0];
-            var items = treeGroups.getSelectionModel().selected.items;
-            selection = items[0];
-        }
-        return selection;
-    },
-
     getFormUserAsNode: function (form, action){
         var me = this;
         var id = action.result.message.id;

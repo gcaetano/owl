@@ -4,11 +4,11 @@ Ext.define('Owl.model.Groups', {
     fields: [
         { 
             type: 'string', 
-            name: 'alias',            
-            convert : function(value, record) {
-                //Your logic to convert the old name(value) into new name.
-                return $.t('app.'+ value);
-            }    
+            name: 'alias'            
+            // convert : function(value, record) {
+            //     //Your logic to convert the old name(value) into new name.
+            //     return $.t('app.'+ value);
+            // }    
         },
 
         { type: 'string', name: '_id' }

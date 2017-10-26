@@ -56,7 +56,7 @@ router.post('/',(req, res, next) => {
     if(req.body && req.body !== {}) {
         var object = req.body;
         BL_Groups.create(req, req.body, (err, insert) => {
-            var response = {success: !err, message: err ? err.errmsg : insert}
+            var response = {success: !err, message: err ? err.errmsg : insert.result}
             res.status(200).send(response);
             res.end();
         });
