@@ -6,12 +6,13 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroupsContr
         'Owl.view.backoffice.security.user.Window',
         'Owl.view.backoffice.security.west.groups.Window',
         'Owl.util.Util',
-        'Owl.util.TreeGroup'
+        'Owl.util.TreeGroup',
+        'Owl.util.Windows'
     ],
 
     onAddGroup: function (menu, item, e, eOpts) {
         var me = this;
-        var window = me.getGroupWindow();
+        var window = Owl.util.Windows.getGroupWindow();
         window.show();
     },
 
@@ -21,7 +22,6 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroupsContr
 
     onDeleteGroup: function (menu, item, e, eOpts) {
         var me = this;
-        debugger;
         var group = Owl.util.TreeGroup.getSelectedItem();
         if(group){
             var data = group.getData();
@@ -51,7 +51,7 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroupsContr
         var me = this;
         var glyph = Owl.util.Glyphs.getGlyph('add_user');
         var title = $.t('app.add user')
-        var window = me.getWindow(title, glyph);
+        var window = Owl.util.Windows.getUserWindow(title, glyph);
 
         window.setTitle(title);
         window.setGlyph(glyph);
@@ -74,7 +74,7 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroupsContr
         var me = this;
         var glyph = Owl.util.Glyphs.getGlyph('edit');
         var title = $.t('app.add user')
-        var window = me.getWindow(title, glyph);
+        var window = Owl.util.Windows.getUserWindow(title, glyph);
 
         window.setTitle(title);
         window.setGlyph(glyph);
@@ -103,40 +103,34 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroupsContr
             fn: function (btn, inputText, showConfig) {
                 if (btn === 'yes') {
                     Ext.getBody().mask('Please whait!');
-                    var trees = Ext.ComponentQuery.query('treepanel#treeGroups');
-                    if (trees && trees.length > 0) {
-                        var treeGroups = trees[0];
-                        var items = treeGroups.getSelectionModel().selected.items;
-                        if (items.length > 0) {
-                            var idUser = items[0].data._id;
-                            var idGroup = items[0].parentNode.data._id;
-                            Ext.Ajax.request({
-                                url: Ext.String.format('/users/{0}/{1}', idUser, idGroup),
-                                method: 'DELETE',
-                                scope: me,
-                                success: 'onRemoveUserSuccess',
-                                failure: 'onRemoveUserFailure'
-                            });
-                        }
-                    }
+                    var user = Owl.util.TreeGroup.getTreeSelectedItem(); // here is the group   
+                    var idUser = user.data._id;
+                    var idGroup = user.parentNode.data._id;
+                    Ext.Ajax.request({
+                        url: Ext.String.format('/users/{0}/{1}', idUser, idGroup),
+                        method: 'DELETE',
+                        scope: me,
+                        success: 'onRemoveUserSuccess',
+                        failure: 'onRemoveUserFailure'
+                    });
                 }
             }
         });
     },
 
-    getWindow: function (title, glyph) {
-        var me = this;
-        var ref = Ext.ComponentQuery.query('window#userWindow');
-        var window = ref.lenght > 0 ? ref[0] : Ext.create({ xtype: 'backoffice-security-user-window' });
-        return window;
-    },
+    // getWindow: function (title, glyph) {
+    //     var me = this;
+    //     var ref = Ext.ComponentQuery.query('window#userWindow');
+    //     var window = ref.lenght > 0 ? ref[0] : Ext.create({ xtype: 'backoffice-security-user-window' });
+    //     return window;
+    // },
 
-    getGroupWindow: function (title, glyph) {
-        var me = this;
-        var ref = Ext.ComponentQuery.query('window#groupWindow');
-        var window = ref.lenght > 0 ? ref[0] : Ext.create({ xtype: 'backoffice-security-group-window' });
-        return window;
-    },
+    // getGroupWindow: function (title, glyph) {
+    //     var me = this;
+    //     var ref = Ext.ComponentQuery.query('window#groupWindow');
+    //     var window = ref.lenght > 0 ? ref[0] : Ext.create({ xtype: 'backoffice-security-group-window' });
+    //     return window;
+    // },
 
     onRemoveUserSuccess: function (conn, response, options, eOpts) {
         me = this;
@@ -154,7 +148,10 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroupsContr
     onRemoveGroupSuccess: function (conn, response, options, eOpts) {
         me = this;
         Ext.getBody().unmask();
-        Owl.util.TreeGroup.reload();
+        //Owl.util.TreeGroup.reload();
+        var group = Owl.util.TreeGroup.getSelectedItem();
+        var parent = group.parentNode;
+        parent.removeChild(group);
         Owl.util.Util.showToast('The group was removed!');
     },
 
@@ -165,7 +162,7 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroupsContr
 
     detachUserFromGroup: function () {
         me = this;
-        var user = Owl.util.TreeGroup.getTreeSelectedItem();
+        var user = Owl.util.TreeGroup.getSelectedItem();
         var group = user.parentNode;
         group.removeChild(user);
     },

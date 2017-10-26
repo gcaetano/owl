@@ -31,11 +31,11 @@ Ext.define('Owl.view.backoffice.security.west.groups.Panel',{
             items: [
                 {
                     xtype: 'button',
-                    itemId: 'refreshGroup',
-                    reference: 'refreshGroup',
+                    itemId: 'refreshGroups',
+                    reference: 'refreshGroups',
                     glyph: Owl.util.Glyphs.getGlyph('refresh'),
                     listeners: {
-                        click: 'onRefreshGroupClick'
+                        click: 'onRefreshGroups'
                     }
                 },
                 '->',
@@ -45,11 +45,10 @@ Ext.define('Owl.view.backoffice.security.west.groups.Panel',{
                     reference: 'addGroup',
                     glyph: Owl.util.Glyphs.getGlyph('plus'),
                     listeners: {
-                        click: 'onAddGroupClick'
+                        click: 'onAddGroup'
                     }
                 }
             ]
         }
     ]
-
 });

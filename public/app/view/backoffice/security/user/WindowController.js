@@ -2,6 +2,11 @@ Ext.define('Owl.view.backoffice.security.user.WindowController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.backoffice-security-user-window',
 
+    requires: [
+        'Owl.util.TreeGroup'
+    ],
+
+
     onSave: function (button, e, options) {
         Ext.getBody().mask('Please whait!');
         var form = button.up('panel').down('form');
@@ -83,9 +88,11 @@ Ext.define('Owl.view.backoffice.security.user.WindowController', {
         var me = this;
 
         if (form) {
-            var group = me.getTreeSelectedItem(); // here is the group            
-            var node = me.getFormUserAsNode(form, action);
-            group.appendChild(node);
+            var group = Owl.util.TreeGroup.getTreeSelectedItem(); // here is the group      
+            if(group){      
+                var node = me.getFormUserAsNode(form, action);
+                group.appendChild(node);
+            }
         }
     },
 
