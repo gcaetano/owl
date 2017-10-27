@@ -9,7 +9,17 @@ Ext.define('Owl.view.backoffice.security.west.groups.PanelController', {
 
 
     onAddGroup : function(menu, item, e, eOpts) {
+        var me = this;
         var window = Owl.util.Windows.getGroupWindow();
+        var title = $.t('app.new group');
+        var glyph = Owl.util.Glyphs.getGlyph('group');
+        window.setTitle(title);
+        window.setGlyph(glyph);
+        
+        Owl.util.Windows.hideButtons(window);
+        var button = window.lookupReference('buttonSave');
+        if (button) button.show();
+
         window.show();
     },
 
@@ -17,5 +27,5 @@ Ext.define('Owl.view.backoffice.security.west.groups.PanelController', {
         Ext.getBody().mask('Please whait!');
         var window = Owl.util.TreeGroup.reload();
         Ext.getBody().unmask();
-    },
+    }    
 });

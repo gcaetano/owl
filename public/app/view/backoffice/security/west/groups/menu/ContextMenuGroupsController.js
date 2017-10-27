@@ -10,10 +10,29 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroupsContr
         'Owl.util.Windows'
     ],
 
-    onAddGroup: function (menu, item, e, eOpts) {
+    onEditGroup: function (nenu, item, e, eOpts) {
         var me = this;
-        var window = Owl.util.Windows.getGroupWindow();
-        window.show();
+        var group = Owl.util.TreeGroup.getSelectedItem();
+        if (group) {
+            var data = group.getData();
+
+            var window = Owl.util.Windows.getGroupWindow();
+            var title = Ext.String.format('{0} [{1}]', $.t('app.edit group'), data.text);
+            var glyph = Owl.util.Glyphs.getGlyph('edit');
+            window.setTitle(title);
+            window.setGlyph(glyph);
+
+            Owl.util.Windows.hideButtons(window);
+            var button = window.lookupReference('buttonEdit');
+            if (button) button.show();
+
+            var form = window.down('form').getForm();
+            var selection = me.getTreeSelectedItem();
+            debugger;
+            form.loadRecord(selection);
+
+            window.show();
+        }
     },
 
     onAddSubGroup: function (menu, item, e, eOpts) {
@@ -23,7 +42,7 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroupsContr
     onDeleteGroup: function (menu, item, e, eOpts) {
         var me = this;
         var group = Owl.util.TreeGroup.getSelectedItem();
-        if(group){
+        if (group) {
             var data = group.getData();
             Ext.Msg.show({
                 title: 'Remove',
@@ -50,13 +69,7 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroupsContr
     onAddUser: function (menu, item, e, eOpts) {
         var me = this;
         var glyph = Owl.util.Glyphs.getGlyph('add_user');
-        var title = $.t('app.add user')
         var window = Owl.util.Windows.getUserWindow(title, glyph);
-
-        window.setTitle(title);
-        window.setGlyph(glyph);
-        window.show();
-
 
         me.hideButtons(window);
         var save = window.lookupReference('buttonSave');
@@ -65,16 +78,23 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroupsContr
         // set the selected group to combo
         var selection = me.getTreeSelectedItem();
         var tab = window.lookupReference('userBasicPanel');
+        if (selection && tab) {
+            var cbxGroup = tab.lookupReference('group');
+            cbxGroup.setValue(selection.get("_id"));
 
-        var cbxGroup = tab.lookupReference('group');
-        cbxGroup.setValue(selection.get("_id"));
+            var title = Ext.String.format("{0} [{1}]", $.t('app.add user'), selection.get("alias"));
+
+            window.setTitle(title);
+            window.setGlyph(glyph);
+            window.show();
+        }
     },
 
     onEditUser: function (menu, item, e, eOpts) {
         var me = this;
         var glyph = Owl.util.Glyphs.getGlyph('edit');
-        var title = $.t('app.add user')
-        var window = Owl.util.Windows.getUserWindow(title, glyph);
+        var title = $.t('app.edit user')
+        var window = Owl.util.Windows.getUserWindow();
 
         window.setTitle(title);
         window.setGlyph(glyph);
@@ -103,43 +123,30 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroupsContr
             fn: function (btn, inputText, showConfig) {
                 if (btn === 'yes') {
                     Ext.getBody().mask('Please whait!');
-                    var user = Owl.util.TreeGroup.getTreeSelectedItem(); // here is the group   
-                    var idUser = user.data._id;
-                    var idGroup = user.parentNode.data._id;
-                    Ext.Ajax.request({
-                        url: Ext.String.format('/users/{0}/{1}', idUser, idGroup),
-                        method: 'DELETE',
-                        scope: me,
-                        success: 'onRemoveUserSuccess',
-                        failure: 'onRemoveUserFailure'
-                    });
+                    var user = Owl.util.TreeGroup.getSelectedItem(); // here is the group   
+                    if (user) {
+                        var idUser = user.data._id;
+                        var idGroup = user.parentNode.data._id;
+                        Ext.Ajax.request({
+                            url: Ext.String.format('/users/{0}/{1}', idUser, idGroup),
+                            method: 'DELETE',
+                            scope: me,
+                            success: 'onRemoveUserSuccess',
+                            failure: 'onRemoveUserFailure'
+                        });
+                    }
                 }
             }
         });
     },
 
-    // getWindow: function (title, glyph) {
-    //     var me = this;
-    //     var ref = Ext.ComponentQuery.query('window#userWindow');
-    //     var window = ref.lenght > 0 ? ref[0] : Ext.create({ xtype: 'backoffice-security-user-window' });
-    //     return window;
-    // },
-
-    // getGroupWindow: function (title, glyph) {
-    //     var me = this;
-    //     var ref = Ext.ComponentQuery.query('window#groupWindow');
-    //     var window = ref.lenght > 0 ? ref[0] : Ext.create({ xtype: 'backoffice-security-group-window' });
-    //     return window;
-    // },
-
     onRemoveUserSuccess: function (conn, response, options, eOpts) {
         me = this;
         Ext.getBody().unmask();
-        // var result = Ext.JSON. decode(response.responseText, true); //"{"success":true,"message":{"user":"59ee0cc86e670539a8f2c5b2","group":"59df82bdc638ae293c1c62b9"}}"
         me.detachUserFromGroup();
         Owl.util.Util.showToast('The user was removed!');
     },
-   
+
     onRemoveUserFailure: function (conn, response, options, eOpts) {
         // this.getView().unmask();
         Owl.util.showErrorMsg('There was a server error!');

@@ -58,7 +58,7 @@ Ext.define('Owl.view.backoffice.security.user.Window', {
                     listeners: {
                         click: 'onSave'
                     }
-                },                {
+                }, {
                     xtype: 'button',
                     text: $.t('app.edit'),
                     hidden: true,

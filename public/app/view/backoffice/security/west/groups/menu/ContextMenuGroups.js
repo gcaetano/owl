@@ -14,13 +14,7 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroups',{
 
     items: [
         {
-            itemId: 'addGroup',
-            reference: 'addGroup',
-            text: $.t('app.new group'),
-            glyph: Owl.util.Glyphs.getGlyph('group'),
-            listeners : {
-                click: 'onAddGroup'
-            }
+            xtype: 'tbseparator'
         },
         {
             itemId: 'addSubGroup',
@@ -49,8 +43,6 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroups',{
                 click: 'onDeleteGroup'
             }
         }, {
-            xtype: 'tbseparator'
-        }, {
             itemId: 'addUser',
             reference: 'addUser',
             text: $.t('app.add user'),
@@ -59,16 +51,16 @@ Ext.define('Owl.view.backoffice.security.west.groups.menu.ContextMenuGroups',{
                 click: 'onAddUser'
             }
         }, {
-            itemId: 'editUser', 
-            reference: 'editUser',            
+            itemId: 'editUser',
+            reference: 'editUser',
             text: $.t('app.edit user'),
             glyph: Owl.util.Glyphs.getGlyph('edit'),
             listeners : {
                 click: 'onEditUser'
             }
         },{
-            itemId: 'delUser',             
-            reference: 'delUser',                  
+            itemId: 'delUser',
+            reference: 'delUser',
             text: $.t('app.delete user'),
             glyph: Owl.util.Glyphs.getGlyph('del_user'),
             listeners : {

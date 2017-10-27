@@ -6,7 +6,7 @@ Ext.define('Owl.view.backoffice.security.Layout', {
 
     requires: [
         'Owl.view.backoffice.security.west.Layout',
-        'Owl.view.backoffice.security.permission.Layout'
+        'Owl.view.backoffice.security.center.permission.Layout'
     ],
 
 

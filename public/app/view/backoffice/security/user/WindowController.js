@@ -49,30 +49,35 @@ Ext.define('Owl.view.backoffice.security.user.WindowController', {
     },
 
     onEditSuccess: function (form, action) {
-        var me = this;
+        // var me = this;
         // the user with the old valeus;
-        var deprecated = me.getTreeSelectedItem(); 
+        // var deprecated = Owl.util.TreeGroup.getSelectedItem(); 
 
         // the group where the user is.
-        var group = deprecated.parentNode; 
+        // var group = deprecated.parentNode; 
 
         // Remove User from the tree.
-        me.detachUserFromGroup();
+        // me.detachUserFromGroup();
 
         // user with current values.
-        var node = me.getFormUserAsNode(form, action);
+        // var node = me.getFormUserAsNode(form, action);
 
         // appende the node to the group with the new values.
-        group.appendChild(node);
+        // group.appendChild(node);
 
         // inform user
-        Owl.util.Util.showToast('Success! User edited.');
+        // Owl.util.Util.showToast('Success! User edited.');
 
-        //unmask body
-        Ext.getBody().unmask();
+        // unmask body
+        // Ext.getBody().unmask();
 
         // close window
-        me.onCancel(); 
+        // me.onCancel(); 
+        me = this;
+        Ext.getBody().unmask();        
+        Owl.util.Util.showToast('Success! User edited.');
+        Owl.util.TreeGroup.reload();
+        me.onCancel();
     },
 
     onSaveEditFailure: function (form, action) {
@@ -88,7 +93,7 @@ Ext.define('Owl.view.backoffice.security.user.WindowController', {
         var me = this;
 
         if (form) {
-            var group = Owl.util.TreeGroup.getTreeSelectedItem(); // here is the group      
+            var group = Owl.util.TreeGroup.getSelectedItem(); // here is the group      
             if(group){      
                 var node = me.getFormUserAsNode(form, action);
                 group.appendChild(node);
@@ -98,7 +103,7 @@ Ext.define('Owl.view.backoffice.security.user.WindowController', {
 
     detachUserFromGroup: function () {
         var me = this;
-        var user = me.getTreeSelectedItem();
+        var user = me.getSelectedItem();
         var group = user.parentNode;
         group.removeChild(user);
     },

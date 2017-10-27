@@ -33,13 +33,21 @@ Ext.define('Owl.view.backoffice.security.west.groups.Window',{
             bodyPadding: 15, //#15
             reference: 'form', // for this "me.lookupReference('form')"
             xtype: 'form',
-            items: [{
-                xtype: 'textfield',
-                name: 'alias',
-                anchor: '100%',
-                fieldLabel: $.t('app.group'),
-                allowBlank: false
-            }]
+            items: [
+                {
+                    xtype: 'hiddenfield',
+                    name: '_id',
+                    fieldLabel: 'Label'
+                },
+                {
+                    xtype: 'textfield',
+                    name: 'alias',
+                    anchor: '100%',
+                    fieldLabel: $.t('app.group'),
+                    allowBlank: false
+            
+                }
+            ]
         }
     ],
     dockedItems: [
@@ -63,9 +71,20 @@ Ext.define('Owl.view.backoffice.security.west.groups.Window',{
                     xtype: 'button',
                     text: $.t('app.save'),
                     reference: 'buttonSave',
+                    hidden: true,                    
                     glyph: Owl.util.Glyphs.getGlyph('save'),
                     listeners: {
                         click: 'onSave'
+                    }
+                },
+                {
+                    xtype: 'button',
+                    text: $.t('app.edit'),
+                    hidden: true,
+                    reference: 'buttonEdit',
+                    glyph: Owl.util.Glyphs.getGlyph('save'),
+                    listeners: {
+                        click: 'onEdit'
                     }
                 }
             ]

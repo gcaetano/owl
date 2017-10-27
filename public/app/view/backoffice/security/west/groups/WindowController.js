@@ -3,6 +3,7 @@ Ext.define('Owl.view.backoffice.security.west.groups.WindowController', {
     alias: 'controller.backoffice-security-west-groups-window',
 
     requires: [
+        'Owl.util.Util',
         'Owl.util.TreeGroup'
     ],
 
@@ -22,6 +23,26 @@ Ext.define('Owl.view.backoffice.security.west.groups.WindowController', {
         }
     },
 
+
+    onEdit: function (button, e, options) {
+        Ext.getBody().mask('Please whait!');
+        var form = button.up('panel').down('form');
+
+        if (form && form.isValid()) {
+            var me = this;
+            debugger;
+            var id = form.getForm().findField('_id').getValue();
+            form.submit({
+                clientValidation: true,
+                url: '/groups/' + id,
+                method: 'PUT',
+                scope: me,
+                success: 'onSaveSuccess',
+                failure: 'onSaveFailure'
+            });
+        }
+    },
+
     onSaveSuccess: function (form, action) {
         me = this;
         Ext.getBody().unmask();        
@@ -32,7 +53,7 @@ Ext.define('Owl.view.backoffice.security.west.groups.WindowController', {
 
     onSaveFailure: function(form, action) {
         Ext.getBody().unmask();        
-        Owl.util.showErrorMsg('There was a server error!');
+        Owl.util.Util.showErrorMsg('There was a server error!');
     },
 
     onCancel: function (button, e, options) {

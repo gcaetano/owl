@@ -8,6 +8,7 @@ Ext.define('Owl.util.TreeGroup', {
                         var node = { 
                             user: false,
                             text: item.get('text'),
+                            alias: item.get('text'),
                             leaf: item.get('users').length === 0,
                             glyph: Owl.util.Glyphs.getGlyph('group'),
                             _id: item.get('_id'),

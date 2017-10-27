@@ -1,11 +1,11 @@
 
-Ext.define('Owl.view.backoffice.security.permission.reports.Reports',{
+Ext.define('Owl.view.backoffice.security.center.permission.reports.Reports',{
     extend: 'Ext.panel.Panel',
     alias: 'widget.permission-security-reports',
     title: $.t('app.reports'),
     requires: [
-        'Owl.view.backoffice.security.permission.reports.ReportsController',
-        'Owl.view.backoffice.security.permission.reports.ReportsModel'
+        'Owl.view.backoffice.security.center.permission.reports.ReportsController',
+        'Owl.view.backoffice.security.center.permission.reports.ReportsModel'
     ],
 
     controller: 'backoffice-security-permission-reports-reports',
